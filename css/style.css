@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#contenedor{
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+.tarjeta{
+    margin: 10px;
+  height: max-content;
+   text-align: center;
+   
+}
+
+#logonav{
+    position:absolute;
+    top: 5px;
+    right: 5px;
+}
+#imgLibro{
+    width: 20vw;
+    display: block;
+    object-fit: cover;
+}
