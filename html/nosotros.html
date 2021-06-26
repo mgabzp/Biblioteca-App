@@ -73,7 +73,7 @@
                 <a class="nav-link" href="/html/cargar.html">Cargar</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/html/nosotros.html">Nosotros</a>
+                <a class="nav-link" href="#">Nosotros</a>
               </li>
             </ul>
           </div>
@@ -86,64 +86,8 @@
         >
       </nav>
     </header>
-    <main>
-      <div class="container mt-5">
-        <div class="row">
-          <div class="col col-md-6">
-            <div class="card">
-              <div class="card-body">
-                <form
-                  onsubmit="envioForm(event)"
-                  class="needs-validation"
-                  novalidate
-                >
-                  <div class="form-group">
-                    <label>Nombre</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="nombre"
-                      required
-                      onchange="actualizar(event)"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label>Email</label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      name="email"
-                      required
-                      onchange="actualizar(event)"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label>Contraseña</label>
-                    <input
-                      type="password"
-                      class="form-control"
-                      name="contrasenia"
-                      required
-                      onchange="actualizar(event)"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label>Imagen</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="imagen"
-                      onchange="actualizar(event)"
-                    />
-                  </div>
-                  <button class="btn btn-info" id="btnSubmit">Guardar</button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
+  
+    <main></main>
     <script src="/js/registro.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -155,31 +99,6 @@
       integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
       crossorigin="anonymous"
     ></script>
-    <script>
-      (function () {
-        "use strict";
-        window.addEventListener(
-          "load",
-          function () {
-            var campos = document.getElementsByClassName("needs-validation");
-
-            var validar = Array.prototype.filter.call(campos, function (form) {
-              form.addEventListener(
-                "submit",
-                function (event) {
-                  if (form.checkValidity() === false) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                  }
-                  form.classList.add("was-validated");
-                },
-                false
-              );
-            });
-          },
-          false
-        );
-      })();
-    </script>
+   
   </body>
 </html>
