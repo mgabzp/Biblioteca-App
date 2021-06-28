@@ -53,11 +53,8 @@ function revisarSesion() {
   document.querySelector("#cerrarBoton").style.visibility = "hidden";
   
 
-  if (!conectado) {
-    setTimeout(function () {
-      alert("Inicia sesión para poder alquilar un libro"); //!Alert más fachero
-    }, 5000);
-  } else {
+  if (conectado) {
+    
     document.querySelector("#sesBoton").style.visibility = "hidden";
     document.querySelector("#usuarioBoton").style.visibility = "visible";
     document.querySelector("#cerrarBoton").style.visibility = "visible";

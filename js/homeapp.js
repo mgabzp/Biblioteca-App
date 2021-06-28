@@ -15,7 +15,7 @@ function revisarSesion() {
   if (!conectado) {
     setTimeout(function () {
       alert("Inicia sesión para poder alquilar un libro"); //!Alert más fachero
-    }, 5000);
+    }, 10000);
   } else {
     document.querySelector("#sesBoton").style.visibility = "hidden";
     document.querySelector("#usuarioBoton").style.visibility = "visible";

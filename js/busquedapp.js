@@ -180,8 +180,9 @@ console.log(indice)//! para ver si trae bien el indice
   libros.splice(indice, 1, libro);
 
   localStorage.setItem("libros", JSON.stringify(libros));
-  cargarTabla(libros);
   $("#modalModif").modal("hide");
+  cargarTabla(libros);
+ location.reload();
   
 
 }
