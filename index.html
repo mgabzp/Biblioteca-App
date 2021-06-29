@@ -6,143 +6,20 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-
+    <link rel="stylesheet" href="/css/style.css" />
     <title>Biblioteca Digital</title>
   </head>
-  <body onload="ordenaDestacadosAccion();">
-    <header>
-      <nav class="navbar navbar-expand-md navbar-light">
-        <div class="container">
-          
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="collapse navbar-collapse justify-content-start"
-            id="navbarNav"
-          >
-            <ul class="navbar-nav">
-              <li class="nav-item activado">
-                <a class="nav-link" href="#"
-                  >Inicio <span class="sr-only">(current)</span></a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/html/busqueda.html">Búsqueda</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Cargar</a>
-              </li>
-            </ul>
-          </div>
-          <a class="navbar-brand font-weight-bold justify-content-end" href="#">Logo</a>
-          </div>
-          </nav>
-    </header>
+  <body>
     <main>
-      <h4>Más Destacados en Categoría Acción</h1>
-
-      <div class="card-deck container-fluid" id="Accion">
-      </div>
-
-      <h4>Más Destacados en Categoría Terror</h1>
-
-      <div class="card-deck container-fluid" id="Terror">
-      </div>
-
-      <h4>Más Destacados en Categoría Ficción</h1>
-
-      <div class="card-deck container-fluid" id="Ficcion">
-
-      </div>
-      
-     
-      
+      <h1>DISEÑO FACHERITO CON ANIMACIÓN DE ESPERA</h1>
     </main>
-
-      <!-- Modal -->
-      <div
-      class="modal fade"
-      id="heroeModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="title_modal">Modal title</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <!-- Card -->
-            <div class="card mb-3" style="max-width: 540px">
-              <div class="row no-gutters">
-                <!-- <div class="col-md-4 pt-3">
-                  <img id="imagen_heroe" src="" alt="imagen" />
-                </div> -->
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <!-- <h5 class="card-title">Card title</h5>
-                    <p class="card-text">
-                      <strong>Poder: </strong><span id="text_poder"></span>
-                    </p>
-                    <p class="card-text">
-                      <strong>Equipo: </strong><span id="text_equipo"></span>
-                    </p> -->
-                    <span class= "fa fa-star" style="cursor: pointer;" id="1estrella" onclik="calificar()" ></span>
-                    <span class= "fa fa-star" style="cursor: pointer;" id="2estrella" onclik="calificar()"></span>
-                    <span class= "fa fa-star" style="cursor: pointer;" id="3estrella" onclik="calificar()"></span>
-                    <span class= "fa fa-star" style="cursor: pointer;" id="4estrella" onclik="calificar()"></span>
-                    <span class= "fa fa-star" style="cursor: pointer;" id="5estrella" onclik="calificar()"></span>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- fin card -->
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Votar
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--Termina modal --> 
- 
-
-<footer></footer>
-
+    <script src="/js/indapp.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -153,11 +30,58 @@
       integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
       crossorigin="anonymous"
     ></script>
-
-
     <script src="https://use.fontawesome.com/823835b326.js"></script>
+    <script>
+      localStorage.clear();
+      let usuarios = [
+        {
+          id:1,
+          nombre: "Admin",
+          email: "adminbiblioteca@gmail.com",
+          contrasenia: "admin1234",
+          imagen:
+            "https://static.vecteezy.com/system/resources/previews/000/348/220/original/vector-reading-icon.jpg",
+        }
+      ];
+            localStorage.setItem("usuarios", JSON.stringify(usuarios));
+        
+      let libros =[
+    {
+     id: 01,
+     categoria: "Fantasia",
+      titulo:"Alicia en el pais de las maravillas",
+      imagen:"https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/b7df7d12920133.5626ee0d99b8b.jpg",
+      contraportada:"http://1.bp.blogspot.com/_QWt0yHvRiyo/S8ofwGakmrI/AAAAAAAAAJg/hWl-55BTmZI/s1600/Alicia+en+el+pais+de+las+maravillas.jpg",
+      autor:"Lewis Carroll",
+      editorial:"Atlas",
+      anio: 1900
+    },
+    {
+      id: 02,
+      categoria: "Vida real",
+      titulo: "En auschwitz no habia prozac",
+      imagen:"https://www.libroclub.com/wp-content/uploads/2020/10/9786070772146-1150x1764.jpg",
+      contraportada: "https://www.sanborns.com.mx/imagenes-sanborns-ii/1200/9786070772146_3.jpg",
+      autor:"edith Eger",
+      editorial:"atlas",
+      anio:2019
+    },
+  {
+    id:03,
+    categoria: "Autoayuda",
+    titulo: "¿Quien se robo mi queso?",
+    imagen: "https://www.granvalparaiso.cl/wp-content/uploads/2014/10/quiensehallevadomiqueso.jpg",
+    contraportada: "http://ecx.images-amazon.com/images/I/71spxbDrcUL.jpg",
+    autor: "Spenser Johnson",
+    editorial: "atlas",
+    anio: 1970
+  }
+];
 
-    <script src="/js/app.js"></script>
-
+  localStorage.setItem("libros", JSON.stringify(libros));
+      setTimeout(function () {
+        location.replace("/html/home.html");
+      }, 3000);
+    </script>
   </body>
 </html>

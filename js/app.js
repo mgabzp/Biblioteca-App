@@ -22,7 +22,7 @@
 // localStorage.setItem("Libros", JSON.stringify(Libros));
 
 //Traigo a Libros los datos de la clave Libros sino hay, lo inicializo en vacio
-let Libros = JSON.parse(localStorage.getItem("Libros")) || [];
+let Libros = JSON.parse(localStorage.getItem("libros")) || [];
 
 
 //Funcion Carga Cards ordenadas  segun la categoria
@@ -32,6 +32,7 @@ function cargarCards(categoria){
  //Filtro libros segun la categoria
  let destacados= Libros.filter(function (libroX){
   let catX = libroX.categoria;
+  console.log(catX)
   return catX === categoria;
   
   });
@@ -78,12 +79,11 @@ function cargarCards(categoria){
         contenedor.appendChild(card);}
   }
 
-  
-cargarCards("Accion");
-cargarCards("Terror");
-cargarCards("Ficcion");
-
-
+  function cargarTodo(){
+// cargarCards("Accion");
+// cargarCards("Terror");
+cargarCards("Fantasia");
+  }
 
 
 
