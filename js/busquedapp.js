@@ -129,6 +129,34 @@ function infoLibro(id){
 }
 
 
+function filterTabla() {
+  let tipoBusqueda = document.querySelector('#tipoBusqueda').value
+  let texto = document.querySelector("#textBuscar");
+
+  if(tipoBusqueda === "titulo"){
+      libroBuscado=libros.filter(function(libro){
+          return libro.titulo.toUpperCase().indexOf(texto.value.toUpperCase())>-1  })
+  }else if(tipoBusqueda === "categoria"){
+      libroBuscado=libros.filter(function(libro){
+          return libro.categoria.toUpperCase().indexOf(texto.value.toUpperCase())>-1  })
+  }else{
+      limpiarTabla()
+      cargarTabla(libros)
+      return
+  }
+
+  if(libroBuscado.length !== 0){
+      limpiarTabla()
+      cargarTabla(libroBuscado)
+  }else{
+      alert("No se encontraron coincidencias")
+  }
+}
+
+
+function limpiarTabla(){
+  document.querySelector('#contenedor').innerHTML=""
+}
 
 
 function alquilar(libro) {

@@ -70,23 +70,21 @@
           </nav>
     </header>
     <main>
-      <div class="row">
-      <div class="col col-md-6 offset-md-3">
-        <div class="input-group my-3">
-          <input type="text" class="form-control" placeholder="Libro a buscar..." . aria-label="Recipient's username"
-            aria-describedby="button-addon2" id="textBuscar" />
-          <div class="input-group-append">
-            <button class="btn btn-outline-info" type="button" id="button-addon2" onclick="filterTabla()">
-              Buscar
-            </button>
-          </div>
-        </div>
-        
+      <br />
+      <br />
+      <div class="input-group mb-3">
+          <select class="btn btn-info" id="tipoBusqueda">
+            <option class="dropdown-item" value="todos" selected>Todos</option>
+            <option class="dropdown-item" value="titulo">Titulo</option>
+            <option class="dropdown-item" value="categoria">Categoria</option>
+          </select>
+          
+        <input type="text" class="form-control" aria-label="Text input with dropdown button" id="textBuscar">
+        <button class="btn btn-outline-info" type="button" onclick="filterTabla()">Buscar</button>
+
       </div>
-         
-         </div>
-         <div id="contenedor" class="row"></div>
-      
+      <br />
+      <div id="contenedor"></div>
       
     </main>
  
