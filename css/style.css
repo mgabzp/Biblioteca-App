@@ -3,6 +3,21 @@
     padding: 0;
     box-sizing: border-box;
 }
-.cardB{
-    margin: 20px;
+
+
+
+#contenedor{
+  
+ display: flex;
+
+   
+   font-family: Helvetica, Arial, sans-serif;
 }
+.card {
+  width: 300px;
+  height: 300px;
+  margin-right: 10px;
+  margin-left: 100px;
+ padding: 50px;
+}
+
