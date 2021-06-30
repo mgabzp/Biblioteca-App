@@ -1,5 +1,10 @@
 //Traigo datos del LocalStorage en caso de haberlo
 let libros = JSON.parse(localStorage.getItem('libros')) || []
+let formulario = document.querySelector('form')
+let otraCategoria = document.querySelector('#otraCategoria').addEventListener('change', (event) => {
+    otraCategoria = event.target.value
+})
+
 
 //Creo la clase para crear instancias de libros
 class Libro{
@@ -17,75 +22,55 @@ class Libro{
 }
 
 // //Creo un libro generico 
-// let libro = {
-//     id = Math.random().toString(36).substr(2,9).toUpperCase(),
-//     categoria = "",
-//     titulo = "",
-//     imagen = "https://bitsofco.de/content/images/2018/12/Screenshot-2018-12-16-at-21.06.29.png",
-//     contraportada = "",
-//     autor = "",
-//     editorial = "",
-//     emision = "",
-//     votos = 0
-// }
+let libro = {
+    id : idGenerator(),
+    categoria : "Ficcion",
+    titulo : "",
+    imagen : "https://bitsofco.de/content/images/2018/12/Screenshot-2018-12-16-at-21.06.29.png",
+    contraportada : "",
+    autor : "",
+    editorial : "",
+    emision : "2016",
+    votos : 0
+}
 
-// //Funcion para manejar los cambios del formulario
-// const handleChange = function(event){
-//     libro = {
-//         ...libro,
-//         [event.target.name] : event.target.value
-//     }
-// }
+//Funcion para manejar los cambios del formulario
+const handleChange = function(event){
+    libro = {
+        ...libro,
+        [event.target.name] : event.target.value
+    }
+}
 
-//Creo un libro a partir de los datos del formulario
-let id = idGenerator()
-let titulo = document.querySelector('#tituloCarga')
-// let categoria = actualizarCategoria()
-let imagen = document.querySelector('#imagenCarga')
-let contraportada = document.querySelector('#contraportadaCarga')
-let autor = document.querySelector('#autorCarga')
-let editorial = document.querySelector('#editorialCarga')
-let emision = document.querySelector('#emisionCarga')
-let votos = 0
+const handleSubmit = function(event){
+    event.preventDefault()
 
-
-//Funcion para agregar libros
-function addLibro(){
-    categoria = actualizarCategoria()
-    console.log(categoria.value)
-    if(categoria.value && titulo.value && contraportada.value && autor.value && editorial.value && emision.value){
-        if(!imagen.value){
-            imagen.value = "https://bitsofco.de/content/images/2018/12/Screenshot-2018-12-16-at-21.06.29.png"
+    if(libro.categoria && libro.titulo && libro.contraportada && libro.autor && libro.editorial && libro.emision){
+        console.log(libro.categoria)
+        if(libro.categoria === "Otro"){
+            libro.categoria = otraCategoria         
         }
-
-        libros.push(new Libro(id, categoria.value, titulo.value, imagen.value, contraportada.value, autor.value, editorial.value, emision.value, votos))
+        libros.push(libro)
         localStorage.setItem('libros', JSON.stringify(libros))
+        formulario.reset()
     }else{
         alert("Faltan datos")
     }
 
 }
 
+//MODIFICAR VISTA PREVIA PARA QUE AL APRETAR EL BOTON NO REINICIE LOS VALORES
+//CAMBIAR EL VALOR DE LA VARIABLE CATEGORIA CON UN IF
 function vistaPrevia(){
-    categoria = actualizarCategoria()
-    document.querySelector('#tituloCard').innerText = titulo.value
-    document.querySelector('#editorialCard').innerText = editorial.value
-    document.querySelector('#categoriaCard').innerText = categoria.value
-    document.querySelector('#emisionCard').innerText = emision.value
-    document.querySelector('.img_card').src = imagen.value
-}
-
-function actualizarCategoria(){
-    catSelect = document.querySelector('#categoriaCarga')
-
-    if(catSelect.value === "Otro"){
-        catSelect = document.querySelector('#otraCategoria')
-    }
-
-    return catSelect
+    document.querySelector('#tituloCard').innerText = libro.titulo
+    document.querySelector('#editorialCard').innerText = libro.editorial
+    document.querySelector('#categoriaCard').innerText = libro.categoria
+    document.querySelector('#emisionCard').innerText = libro.emision
+    document.querySelector('.img_card').src = libro.imagen
 }
 
 //Funcion para generar ID de los libros
 function idGenerator(){
     return Math.random().toString(36).substr(2,9).toUpperCase()
 }
+
