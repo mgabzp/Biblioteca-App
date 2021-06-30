@@ -154,8 +154,7 @@ h2 {
     display: block;
     object-fit: cover;
 }
-    -webkit-box-sizing: border-box;
-}
+
 .cardB{
     margin: 20px;
 }
