@@ -154,3 +154,16 @@ h2 {
     display: block;
     object-fit: cover;
 }
+
+.cardB{
+    margin: 20px;
+}
+
+.img_card {
+    width: 100%;
+  }
+  
+  .card_avatar {
+    width: 18rem;
+  }
+
