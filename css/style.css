@@ -131,12 +131,6 @@ h2 {
 
 /*FIN MODAL SUSCRIPCION*/
 
-/*Estilo mi cuenta*/
-.container{
-    display: inline-block !important; 
-}
-/*fin estilo mi cuenta*/
-
 .tarjeta{
     margin: 10px;
   height: max-content;

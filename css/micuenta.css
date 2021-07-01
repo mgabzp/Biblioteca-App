@@ -1,0 +1,61 @@
+:root{
+    --color1: #EE4540;
+    --color2: #C72C41;
+    --color3: #801336;
+    --color4: #510A32;
+    --color5: #2D142C;
+}
+
+body {
+    margin: 0;
+    padding-top: 40px;
+    color: var(--color5);
+    background: #f5f6fa;
+    position: relative;
+    height: 100%;
+}
+
+.config-micuenta .perfil-usuario {
+    margin: 0 0 1rem 0;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+.config-micuenta .perfil-usuario .avatar-usuario {
+    margin: 0 0 1rem 0;
+}
+.config-micuenta .perfil-usuario .avatar-usuario img {
+    width: 90px;
+    height: 90px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+}
+.config-micuenta .perfil-usuario h5.nombre-usuario {
+    margin: 0 0 0.5rem 0;
+    color: var(--color5);
+}
+.config-micuenta .perfil-usuario h2.email-usuario {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--color5);
+}
+
+.form-control {
+    border: 2px solid #cfd1d8;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    font-size: .825rem;
+    background: #ffffff;
+    color: #2e323c;
+}
+
+.card {
+    background: #ffffff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 0;
+    margin-bottom: 1rem;
+}
