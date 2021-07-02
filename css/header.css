@@ -12,7 +12,7 @@
 }
 #main{
     height: 300vh;
-    background-color: green;
+    background-color: var(--color3);
 }
 #gaHeader{
     font-family: 'Roboto Mono', monospace;
@@ -27,6 +27,12 @@
 #gaColBtn{
     color: white;
 }
+.collapse .show #gaLista {
+    background-color: #510a328e;
+    text-align: center;
+    padding-right: 15px;
+    padding-bottom: 15px;
+  }
 
 
 #gaHeader.colorear{
