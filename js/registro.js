@@ -3,19 +3,21 @@ let usuarios = JSON.parse(localStorage.getItem('usuarios'))||[];
 let conectado = JSON.parse(localStorage.getItem("conectado")) || null;
 revisarSesion();
 class Usuario{
-  constructor(id,nombre,email,contrasenia,imagen,alquileres){
-    this.id=id
-    this.nombre=nombre
-    this.email=email
-    this.contrasenia=contrasenia
-    this.imagen=imagen
-    this.alquileres=alquileres
+  constructor(id,nombre,email,contrasenia,imagen,suscripto,alquileres){
+    this.id=id;
+    this.nombre=nombre;
+    this.email=email;
+    this.contrasenia=contrasenia;
+    this.imagen=imagen;
+    this.suscripto=suscripto;
+    this.alquileres=alquileres;
+
   }
 }
 
 
 
-let usuario= new Usuario(Math.random().toString(18).substr(8),'','','','https://static.vecteezy.com/system/resources/previews/000/350/297/original/vector-reading-icon.jpg',[]);
+let usuario= new Usuario(Math.random().toString(18).substr(8),'','','','https://static.vecteezy.com/system/resources/previews/000/350/297/original/vector-reading-icon.jpg',false,[]);
   
 let formulario=document.querySelector('form');
 const actualizar = function(e){
