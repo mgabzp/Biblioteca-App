@@ -12,8 +12,9 @@
 }
 #main{
     height: 300vh;
-    background-color: var(--color3);
+    background-color: black;
 }
+/* Estilo header */
 #gaHeader{
     font-family: 'Roboto Mono', monospace;
     width: 100vw;

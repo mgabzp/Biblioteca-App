@@ -13,15 +13,18 @@
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="/css/login.css" />
 
     <title>Login</title>
   </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-md navbar-light">
-        <div class="container">
+  <body id="loginBody">
+   
+    <header id="gaHeader">
+      <nav class="navbar navbar-expand-md" id="gaNavbar">
+        <div class="container" id="gacontenedor">
           <button
-            class="navbar-toggler"
+            class="navbar-toggler justify-content-end"
+            id="gaColBtn"
             type="button"
             data-toggle="collapse"
             data-target="#navbarNav"
@@ -29,112 +32,137 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <img id="logoNav" src="/img/biblioteca-01.png" alt="logo biblioteca"></button>
           <div
-            class="collapse navbar-collapse justify-content-start"
+            class="collapse navbar-collapse justify-content-start gaNavCol"
             id="navbarNav"
           >
-            <ul class="navbar-nav">
-              <li class="nav-item" id="sesBoton">
-                <a class="nav-link" href="/html/login.html" 
-                  ><i class="fa fa-user" aria-hidden="true"
-                    >Iniciar Sesión</i
+            <ul class="navbar-nav" id="gaLista">
+              <li class="nav-item gaItem">
+                <a class="nav-link" id="sesBoton" href="/html/login.html"
+                  ><i class="fa fa-user fa-2x" aria-hidden="true"
+                    ></i
                   ></a
                 >
               </li>
-              <li class="nav-item" id="usuarioBoton">
+              <li class="nav-item gaItem" id="usuarioBoton">
                 <a
                   class="nav-link"
-                  href="#"
+                  href="/html/micuenta.html"
                   id="perfLink"
-                  onclick="irPerfil()"
                 ></a>
               </li>
-              <li class="nav-item" id="cerrarBoton">
+              <li class="nav-item gaItem" id="cerrarBoton">
                 <button
                   class="btn-danger"
                   id="cerrarLink"
                   onclick="cerrarSesion()"
                 >
-                  X
+                  x
                 </button>
               </li>
-              <li class="nav-item activado">
-                <a class="nav-link" href="/html/home.html"
-                  >Inicio</a
+              <li class="nav-item activado gaItem">
+                <a class="nav-link" href="#"
+                  >Inicio <span class="sr-only">(current)</span></a
                 >
               </li>
-              <li class="nav-item">
+
+              <li class="nav-item gaItem">
                 <a class="nav-link" href="/html/busqueda.html">Búsqueda</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/html/cargar.html">Cargar</a>
+              <li class="nav-item gaItem">
+                <a class="nav-link" href="#">Cargar</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item gaItem">
                 <a class="nav-link" href="/html/nosotros.html">Nosotros</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item gaItem">
                 <a class="nav-link" href="/html/contacto.html">Contacto</a>
               </li>
+              <button
+                type="button"
+                class="btn btn-success btn-sm mb-5"
+                data-toggle="modal"
+                data-target="#exampleModal"
+                id="susBtn"
+              >
+                Subscríbete
+              </button>
             </ul>
           </div>
         </div>
         <a
-          class="navbar-brand font-weight-bold justify-content-end"
+          class="navbar-brand font-weight-bold justify-content-end d-none d-md-block"
           id="logonav"
-          href="/html/home.html"
-          >Logo</a
+          href="#"
+          ><img id="logoNav" src="/img/biblioteca-01.png" alt="logo biblioteca"></a
         >
       </nav>
     </header>
-    <main>
+    <main id="loginMain">
+      
       <div class="container">
-        <div class="row mt-5">
-          <div class="col col-md-6 offset-md-3">
-            <div class="card">
-              <h5 class="card-header">Inicio de sesión</h5>
-              <div class="card-body">
-                <form onsubmit="envioForm(event)">
-                  <div class="form-group">
-                    <label>Email</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="email"
-                      id="userEmail"
-                      maxlength="150"
-                      onchange="actualizar(event)"
-                    />
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-center mb-5">
+            <h2 class="loginTitulo">Inicia sesión</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-lg-4 divLogin">
+            <div class="login-wrap p-0">
+              <h5 class="mb-4 text-center">Ya tienes una cuenta?</h5>
+              <form onsubmit="envioForm(event)">
+              <div class="form-group">
+                <!-- <label>Email</label> -->
+                <input
+                  type="text"
+                  class="form-control loginField"
+                  name="email"
+                  id="userEmail"
+                  placeholder="Email"
+                  maxlength="150"
+                  onchange="actualizar(event)"
+                />
+              </div>
+              <div class="form-group">
+               
+                <input
+                  type="password"
+                  class="form-control loginField"
+                  name="contrasenia"
+                  id="userPassword"
+                  maxlength="150"
+                  placeholder="Contraseña"
+                  onchange="actualizar(event)"
+                />
+             
                   </div>
-                  <div class="form-group">
-                    <label>Contraseña</label>
-                    <input
-                      type="password"
-                      class="form-control"
-                      name="contrasenia"
-                      id="userPassword"
-                      maxlength="150"
-                      onchange="actualizar(event)"
-                    />
-                  </div>
+                <div class="form-group">
                   <button
-                    class="btn btn-info float-right"
+                    class="btn btn-info btn-block"
                     id="btnSubmit"
                     type="submit"
                   >
                     Entrar
                   </button>
-                  <p>
-                    Si aún no tiene cuenta regístrese desde
-                    <a href="/html/registro.html">aquí</a>
-                  </p>
-                </form>
-              </div>
+                  <br>
+                  <span>
+                    Si aún no tenés cuenta registrate  <a href="/html/registro.html">aquí</a>
+                  </span>
+                </div>
+                <div class="form-group d-md-flex">
+                  
+                  <div class="w-50 justify-content-center">
+                    <a href="/html/error404.html" >Forgot Password</a>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
+      
+   
     </main>
 
     <script
