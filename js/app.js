@@ -27,14 +27,18 @@ let Libros = JSON.parse(localStorage.getItem("Libros")) || [];
 
 //Funcion Carga Cards ordenadas  segun la categoria
 
-function cargarCards(categoria){
+//let contenido = [];
 
- //Filtro libros segun la categoria
- let destacados= Libros.filter(function (libroX){
-  let catX = libroX.categoria;
-  return catX === categoria;
+function cargarCards(categoria)
+{
+
+  //let contenido = [];
+  //Filtro libros segun la categoria
+  let destacados= Libros.filter(function (libroX){
+    let catX = libroX.categoria;
+    return catX === categoria;
   
-  });
+    });
 
   //Ordenos los Libros filtrados por categoria
   let ordenados = destacados.sort((a,b)=>{
@@ -43,40 +47,86 @@ function cargarCards(categoria){
     return 0;
     });
     destacados.reverse();
-
-
-    for (let index = 0; index < 3 ; index++) {
+    
+    
+    for (let index = 0; index < 3 ; index++)
+    {
       const elemento = ordenados[index];
       let libro = elemento.titulo
    
       let idLibro = Libros.findIndex(function (libro1) {
         return libro1.titulo === libro
       })
-        
-    
-        let card = document.createElement('div')
-        card.innerHTML = `
-        <div class="card cardB" >
-          <img src="${elemento.imagen}" class="card-img-top" alt="Portada Libro" id="imgAccion1">
-          <div class="card-body" >
-            <h5 class="card-title" id="tituloAccion1">Título: ${elemento.titulo}</h5>
-            <small class="text-muted" id="fechaEstrenoAccion1">Estreno: ${elemento.anio}</small>
-            <div><small id="votosAccion1">Votos: ${elemento.votos}</small></div>
-            <div><small id="categoriaAccion1">Categoría: ${elemento.categoria}</small></div>
-            <p class="card-text" id="descripLibroAccion1">Descripción: ${elemento.contraportada}</p>
-          </div>
-          <div class="card-footer">
-            <div class="userDiv">
-              <button>Más info</button>
-              <button >Alquilar</button>
-              <button class= "fas fa-thumbs-up fa-2x" style="outline:none;" onclick="votar(${idLibro})"></button>
+      let card = document.createElement('div')
+      card.classList.add("Libro")
+      card.innerHTML =`
+      
+            <div class="libro-img" style="background-image: url(http://4.bp.blogspot.com/_JX0mJgkbNS0/THgN3lW3W8I/AAAAAAAAAAc/A-HjrEokOOg/s1600/cronica+de+una+muerte+anunciada.jpg);"></div>
+              <div class="text-libro-cont">
+                <div class="mr-grid">
+                  <div class="col1">
+                    <h1>${elemento.titulo}</h1>
+                    <ul class="libro-gen">
+                      <li>Autor: ${elemento.autor} /</li>
+                      <li>Categoría: ${elemento.categoria}</li>
+                    </ul>
+                </div>
+              </div>
+              <div class="mr-grid summary-row">
+                <div class="col2">
+                  <h5>Descripción:</h5>
+                </div>
+                <div class="col2">
+                  <ul class="libro-likes">
+                    <li><i class="material-icons"></i>${elemento.votos}</li>
+                    <li><i class="material-icons fas fa-thumbs-up fa-1x" style="outline:none; cursor:pointer;" onclick="votar(${idLibro})"></i></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mr-grid">
+                <div class="col1">
+                  <p class="libro-description">${elemento.contraportada}</p>
+                </div>
+              </div>
+            </div>` 
+      
+      //contenido.push(card);
 
-            </div>
-          </div>
-        </div>`
-        let contenedor= document.getElementById(categoria)
-        contenedor.appendChild(card);}
-  }
+      
+     
+        //let contenedor= document.getElementById('main');
+        //contenedor.appendChild(card);
+        //contenedor.innerHTML = card
+        //contenedor.appendChild(card);
+        let contenedor= document.getElementById(categoria);
+        //let estructura = contenido[0].concat(contenido[1], contenido[2]);
+        // contenido.forEach(element => {
+        //   contenedor.appendChild(element);
+        contenedor.appendChild(card);
+
+
+    }
+
+
+      
+
+
+
+
+ 
+          
+}
+      
+ 
+        
+      //  contenedor.innerHTML = estructura;
+      //  //contenedor.innerHTML = card + card + card;
+      
+      
+
+
+      
+  
 
   
 cargarCards("Accion");
@@ -84,36 +134,18 @@ cargarCards("Terror");
 cargarCards("Ficcion");
 
 
-
-
-
 function votar(id) {
 
  Libros[id].votos ++ == 1
  localStorage.setItem("Libros", JSON.stringify(Libros))
- alert(`Suma un voto al libro: ${Libros[id].titulo}`)
+ //alert(`Suma un voto al libro: ${Libros[id].titulo}`)
  location.reload()
-
-// document.querySelector("#title_modal").innerText = Libros[id].titulo;
-
-//  $("#heroeModal").modal("show");
-
 }
 
+// function agregarITEM(card) {
+//   let contenedor= document.getElementById('main');
 
-// function califica(){
-
-// alert("hola")
-// // contador = item.id[0]
-// // let nombre = item.id.substring(1);
-// // for (let i = 0; i < 5; i++) {
-// //   if(i < contador)
-// //   {
-// //     document.getElementById((i+1)+nombre).style.color ="orange";
-
-// //   }
   
-// // }
 // }
 
 
