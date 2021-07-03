@@ -2,66 +2,30 @@ let libros = JSON.parse(localStorage.getItem("libros")) || [];
 let conectado = JSON.parse(localStorage.getItem("conectado")) || null;
 let usuarios = JSON.parse(localStorage.getItem('usuarios'))||[];
 revisarSesion();
-class Libro {
-  constructor(
-    id,
-    categoria,
-    titulo,
-    imagen,
-    contraportada,
-    autor,
-    editorial,
-    anio
-  ) {
-    this.id = id;
-    this.categoria = categoria;
-    this.titulo = titulo;
-    this.imagen = imagen;
-    this.contraportada = contraportada;
-    this.autor = autor;
-    this.editorial = editorial;
-    this.anio = anio;
-  }
-}
-if (libros.length == 0) {
-  libros.push(
-    new Libro(
-      01,
-      "Fantasia",
-      "Alicia en el pais de las maravillas",
-      "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/b7df7d12920133.5626ee0d99b8b.jpg",
-      "http://1.bp.blogspot.com/_QWt0yHvRiyo/S8ofwGakmrI/AAAAAAAAAJg/hWl-55BTmZI/s1600/Alicia+en+el+pais+de+las+maravillas.jpg",
-      "Lewis Carroll",
-      "Atlas",
-      1900
-    )
-  );
-  libros.push(
-    new Libro(
-      02,
-      "Vida real",
-      "En auschwitz no habia prozac",
-      "https://www.libroclub.com/wp-content/uploads/2020/10/9786070772146-1150x1764.jpg",
-      "https://www.sanborns.com.mx/imagenes-sanborns-ii/1200/9786070772146_3.jpg",
-      "edith Eger",
-      "atlas",
-      2019
-    )
-  );
-  libros.push(
-    new Libro(
-      03,
-      "Autoayuda",
-      "¿Quien se robo mi queso?",
-      "https://www.granvalparaiso.cl/wp-content/uploads/2014/10/quiensehallevadomiqueso.jpg",
-      "http://ecx.images-amazon.com/images/I/71spxbDrcUL.jpg",
-      "Spenser Johnson",
-      "atlas",
-      1970
-    )
-  );
-  localStorage.setItem("libros", JSON.stringify(libros));
-}
+// class Libro {
+//   constructor(
+//     id,
+//     categoria,
+//     titulo,
+//     imagen,
+//     contraportada,
+//     autor,
+//     editorial,
+//     anio,
+//     votos
+//   ) {
+//     this.id = id;
+//     this.categoria = categoria;
+//     this.titulo = titulo;
+//     this.imagen = imagen;
+//     this.contraportada = contraportada;
+//     this.autor = autor;
+//     this.editorial = editorial;
+//     this.anio = anio;
+//     this.votos=votos;
+//   }
+// }
+
 
 function cargarTabla(array) {
   array.forEach(function (elemento,index) {
@@ -93,11 +57,11 @@ function cargarTabla(array) {
 
 function filterTabla() {
   let texto = document.querySelector("#textBuscar");
-  libros = libros.filter(function (libro) {
+  filtrados = libros.filter(function (libro) {
     return libro.titulo.toUpperCase().indexOf(texto.value.toUpperCase()) > -1;
   });
   limpiarTabla();
-  cargarTabla(libros);
+  cargarTabla(filtrados);
 }
 
 function limpiarTabla() {
@@ -160,7 +124,7 @@ function limpiarTabla(){
 
 
 function alquilar(libro) {
-  if (conectado.email !== 'adminbiblioteca@gmail.com'){
+  if (conectado.email !== 'adminbiblioteca@gmail.com'&& conectado.suscripto== true){
   conectado.alquileres.push(libro);
 
   let encontrado = usuarios.indexOf(conectado);

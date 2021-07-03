@@ -1,0 +1,184 @@
+:root{
+    --color1: #EE4540;
+    --color2: #C72C41;
+    --color3: #801336;
+    --color4: #510A32;
+    --color5: #2D142C;
+}
+
+#loginMain{
+    padding-top: 20vh;
+}
+#regisBody{
+    background-image: url("https://www.urdesignmag.com/wordpress/wp-content/uploads/2016/08/yangzhou-zhongshuge-library-xl-muse-1.jpg");
+    height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+#registroMain{
+    padding-top: 5vh;
+}
+#loginBody{
+    background-image: url("https://4.bp.blogspot.com/-PsQIpcuvTbQ/VNPKa93VnqI/AAAAAAAABgs/e-4e3d2shpo/s1600/Biblioteca%2BTrinity%2BCollege.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    
+}
+#btnSubmit{
+background-color: var(--color3);
+font-size: 1.5rem;
+border-radius: 25px;
+margin-top: 30px;
+transition-property: background-color;
+ transition-duration: 0.5s;
+}
+#btnSubmit:hover{
+    background-color: rgb(167, 20, 103);
+}
+.loginField{
+    background-color: rgba(255, 255, 255, 0.295);
+   border-radius: 18px;
+   color: whitesmoke !important;
+  
+}
+
+.loginField:hover{
+    background-color: rgba(255, 255, 255, 0.096);
+}
+.loginField:active{
+    background-color: rgba(255, 255, 255, 0.137);
+    color: ivory;
+}
+.loginField:focus-within{
+    background-color: rgba(255, 255, 255, 0.137);
+}
+
+
+
+.loginField::placeholder{
+    font-size: 1.1rem;
+    color: white;
+    
+}
+.form-group a{
+text-decoration: none;
+color: rgb(245, 196, 196);
+font-weight: 650;
+transition-property: font-size;
+ transition-duration: 0.5s;
+    
+}
+
+.form-group a:hover{
+    font-size: 1.2rem ;
+}
+
+
+
+.form-group span{
+    font-weight: 600;
+}
+.divLogin{
+    padding-top: 5px;
+    background-color: #510a327a;
+    border-radius: 30px;
+}
+.divRegis{
+    padding-top: 5px;
+    background-color: #510a32ad;
+    border-radius: 30px;
+}
+/* Estilo header */
+#gaHeader{
+    font-family: 'Roboto Mono', monospace;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: #2d142c9c;
+    transition: background-color 500ms, color 500ms;
+    
+}
+#gaColBtn{
+    color: white;
+}
+.collapse .show #gaLista {
+    background-color: #510a328e;
+    text-align: center;
+    padding-right: 15px;
+    padding-bottom: 15px;
+  }
+
+
+#gaHeader.colorear{
+background-color: var(--color4);
+
+}
+#gaLista{
+    margin-left: 3vw;
+    margin-top: 3vh;
+}
+#susBtn{
+    margin-top: 3vh;
+    margin-left: 1vw;
+    background-color: var(--color2);
+    border: 1px solid var(--color5);
+    transition-property: transform;
+    transition-duration: 0.5s;
+    
+}
+#susBtn:hover{
+    transform: scale(1.1);
+}
+
+#gacontenedor{
+    margin: 0;
+    padding: 0;
+}
+
+
+#navbarNav{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 0;
+    height: 10vh;
+    background-color: transparent;
+    
+}
+
+.gaItem {
+    margin-top: 2vh;
+    margin-bottom: 0;
+    padding: 0;
+    height: fit-content;
+    transition-property: transform;
+    transition-duration: 0.5s;
+    
+}
+.gaItem:hover{
+    transform: scale(1.15);
+}
+#gaLista .gaItem a{
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    
+}
+.activado{
+    border-bottom: 2px solid var(--color2);
+
+    font-weight: bold;
+}
+#logoNav{
+   position: fixed;
+   top: 2vh;
+   right: 5vw;
+
+    height: 8vh;
+}
