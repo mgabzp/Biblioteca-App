@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+  </head>
+  <body>
+      <header>
+        <nav class="navbar navbar-expand-md navbar-light">
+            <div class="container">
+              
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div
+                class="collapse navbar-collapse justify-content-start"
+                id="navbarNav"
+              >
+                <ul class="navbar-nav">
+                  <li class="nav-item activado">
+                    <a class="nav-link" href="/index.html">Inicio<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Búsqueda</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/html/cargar.html">Cargar</a>
+                  </li>
+                </ul>
+              </div>
+              <a class="navbar-brand font-weight-bold justify-content-end" href="#">Logo</a>
+              </div>
+              </nav>
+      </header>
+      <main>
+
+    <!-- ********************TEXTO O IMAGEN DE CONTACTANOS******************** -->
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+         <h5 class="justify-content-end">Contacto</h5>
+         <p>Algun texto</p>
+         <p>Nuestro mail</p>
+         <p>Nuestro telefono</p>
+        </div>
+    <!-- ********************FORMULARIO PARA ENVIAR CONSULTA******************** -->
+        <div class="col-6">
+          <form class="needs-validation" onsubmit="handleSubmit(event)" novalidate>
+            <div class="form-group">
+              <input type="text" class="form-control" id="nombreConsulta" name="titulo" onchange="handleChange(event)" placeholder="Nombre" required>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="apellidoConsulta" name="autor" onchange="handleChange(event)" placeholder="Apellido" required>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="imagenCarga" name="imagen" onchange="handleChange(event)" placeholder="Ingrese un email valido">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="contraportadaCarga" name="contraportada" onchange="handleChange(event)" required placeholder="Su consulta">
+            </div>
+      
+            <button class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
+    </div>
+</div>
+
+      </main>
+      <footer>
+
+      </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  </body>
+</html>
