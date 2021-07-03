@@ -1,19 +1,11 @@
-// let usuarios = JSON.parse(localStorage.getItem('usuarios'))||[];
+let usuarios = JSON.parse(localStorage.getItem('usuarios'))||[];
 let conectado = JSON.parse(localStorage.getItem("conectado")) || null;
+let perfil = conectado
 
 vistaPerfil()
 
-class Perfil{
-    constructor(nombre, email, contraseniaNueva, imagen){
-        this.nombre =nombre
-        this.email=email
-        this.contraseniaNueva=contraseniaNueva
-        this.imagen= imagen
-    }
-}
-
-let perfil= new Perfil ('', '', '', '');
 let formulario = document.querySelector('form')
+let formularioPass = document.querySelector('#form2')
 
 const handleChange = function(e){
     perfil = {
@@ -24,29 +16,52 @@ const handleChange = function(e){
 
 const handleSubmit = function(e){
     e.preventDefault()
-    let validar = validarContrasenia (perfil.contraseniaNueva)
+    let validar = validarContrasenia (perfil)
+    let index = usuarios.findIndex(function(item){
+        return item.id === perfil.id
+      })
 
     if(validar){
-        alert ('Debe elegir una contraseña distinta'); 
-        } else if (perfil.nombre && perfil.email && perfil.contraseniaNueva && perfil.imagen) {
-            conectado.push(perfil)
+        alert ('Debe elegir una contraseña distinta');
+        } else if (perfil.nombre && perfil.email && perfil.imagen){
+            conectado = perfil
+            usuarios.splice(index, 1, perfil)
             localStorage.setItem('conectado', JSON.stringify(conectado))
+            localStorage.setItem('usuarios', JSON.stringify(usuarios))
             formulario.reset();
             alert ('Se actualizaron sus datos');
             location.replace ('/html/home.html')
         }   
 }
 
-function validarContrasenia (contrasenia){
-    let validar = conectado.find (function(perfil){
-        return perfil.contraseniaNueva.toLowerCase() === contrasenia.toLowerCase()
-    })
-    if (validar){
-        return true;
-    } else {
-        return false;
+function validarContrasenia (perfil){
+    
+    if(perfil.contrasenia === conectado.contrasenia){
+        return true
+    }else{
+        return false
     }
+}
 
+const cambiarClave= function(e){
+    e.preventDefault()
+    let clave1 = document.querySelector("#clave1").value
+    let clave2 = document.querySelector ("#clave2").value
+    let index = usuarios.findIndex(function(item){
+        return item.id === perfil.id
+      })
+    
+    if (clave1 === clave2){
+        conectado = perfil
+        usuarios.splice(index, 1, perfil)
+        alert ('Las claves coinciden')
+        alert ('Se actualizaron sus datos')
+        localStorage.setItem('usuarios', JSON.stringify(usuarios))
+        localStorage.setItem('conectado', JSON.stringify(conectado))
+        formularioPass.reset();
+    } else {
+        alert ('Las claves no coinciden, por favor reingresar clave.')
+    }
 }
 
 
@@ -59,9 +74,8 @@ function vistaPerfil(){
     //seccion datos
     document.querySelector('#nombreCompleto').value = conectado.nombre
     document.querySelector('#email').value= conectado.email
-    document.querySelector('#alquileres').value = conectado.alquileres
-    document.querySelector('#contrasenia').value = conectado.contrasenia
-    
+    document.querySelector('#imagenPerfil').value= conectado.imagen
+    document.querySelector('#alquileres').value = conectado.alquileres  
 }
 
 

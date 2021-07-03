@@ -15,6 +15,7 @@
     />
     <!-- <link rel="stylesheet" href="/css/style.css" /> -->
     <link rel="stylesheet" href="/css/micuenta.css">
+    <link rel="stylesheet" href="/css/carouselmicuenta.css">
     <!--EMAIL JS-->
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
@@ -156,8 +157,8 @@
    
    <!--Fin de modal suscripción-->
   <!--Inicio seccion mi cuenta-->
-  <main>
-      <div class="container">
+<main>
+    <div class="container">
         <div class="row gutters">
         <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
         <div class="card h-100">
@@ -181,66 +182,96 @@
           <div class="card-body">
             <div class="row gutters">
               <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                <h2 class="mb-2 text-success">Mi cuenta</h2>
+                <h2 class="mb-2">Mi cuenta</h2>
               </div>
-              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                <div class="form-group">
-                  <label for="nombrecompleto">Nombre completo</label>
-                  <input type="text" class="form-control" id="nombreCompleto"
-                  name="nombre"
-                  onchange="handleChange(event)" required>
-                </div>
-              </div>
-              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                <div class="form-group">
-                  <label for="eMail">Email</label>
-                  <input type="email" class="form-control" id="email" name= 'email'
-                  placeholder="Ingrese email"
-                  onchange="handleChange(event)" required>
-                </div>
-              </div>
-              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                <div class="form-group">
-                  <label for="alquileres">Alquileres</label>
-                  <input type="text" class="form-control" id="alquileres" name= 'alquileres' placeholder="libro 1, libro 2">
-                </div>
+          <form onsubmit="handleSubmit(event)">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+              <div class="form-group">
+                <label for="nombrecompleto">Nombre completo</label>
+                <input type="text" class="form-control" id="nombreCompleto"
+                name="nombre"
+                onchange="handleChange(event)" required>
               </div>
             </div>
-            <div class="row gutters">
-              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                <h6 class="mt-3 mb-2 text-success">Cambiar contraseña</h6>
-              </div>
-              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                <div class="form-group">
-                  <label for="contraseniaActual">Contraseña Actual</label>
-                  <input type="password" class="form-control" id="contrasenia">
-                </div>
-              </div>
-              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                <div class="form-group">
-                  <label for="contraseniaNueva">Contraseña Nueva</label>
-                  <input type="password" class="form-control" id="contraseniaNueva"
-                  name=contraseniaNueva placeholder="******"
-                  onchange="handleChange(event)" required>
-                </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+              <div class="form-group">
+                <label for="eMail">Email</label>
+                <input type="email" class="form-control" id="email" name= 'email'
+                placeholder="Ingrese email"
+                onchange="handleChange(event)" required>
               </div>
             </div>
-            <div class="row gutters">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+              <div class="form-group">
+                <label for="alquileres">Alquileres</label>
+                <input type="text" class="form-control" id="alquileres" name= 'alquileres' placeholder="libro 1, libro 2">
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+              <div class="form-group">
+                <label for="imagen">Cambiar imagen</label>
+                <input type="imagen" class="form-control" id="imagenPerfil" name= 'imagen'
+                placeholder="Inserte url de su imagen"
+                onchange="handleChange(event)" required>
+              </div>
+            </div>
               <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <div class="text-right">
-                  <button type="button" id="submit" name="submit" class="btn btn-success" >Actualizar</button>
-                </form>
+                  <button id="submit" name="submit" class="btn" >Actualizar</button>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
-        </div>
-        </div>
-        </div>
-        </div>
-      
-  </main>
-  <footer></footer>
+          <form id="form2" onsubmit="cambiarClave(event)">
+          <div class="row gutters">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+              <h6 class="mt-3 mb-2">Cambiar contraseña</h6>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+              <div class="form-group">
+                <label for="contraseniaNueva">Contraseña nueva</label>
+                <input type="password" class="form-control" id="clave1"
+                name=clave1 placeholder="******"
+                onchange="handleChange(event)" required>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+              <div class="form-group">
+                <label for="repetirContrasenia">Repetir contraseña</label>
+                <input type="password" class="form-control" id="clave2"
+                name=clave2 placeholder="******"
+                onchange="handleChange(event)" required>
+              </div>
+            </div>
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="text-right">
+                  <button id="submit2" name="submit" class="btn">Guardar</button>
+                </div>
+              </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!--Seccion Mis libros-->
+<section class="carousel-libros-micuenta">
+  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+    <h2 class="mb-2 text-left">Mis libros</h2>
+  </div>
+  <div class="carousel">
+    <div class="carousel__face"><span class="mis-libros">This is something</span></div>
+    <div class="carousel__face"><span class="mis-libros">Very special</span></div>
+    <div class="carousel__face"><span class="mis-libros">Special is the key</span></div>
+    <div class="carousel__face"><span class="mis-libros">For you</span></div>
+    <div class="carousel__face"><span class="mis-libros">Just give it</span></div>
+  </div>
+</section>
+</main>
+
+
+<footer></footer>
   
   
   <script src="/js/suscripcion.js"></script>

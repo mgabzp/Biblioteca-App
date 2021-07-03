@@ -6,14 +6,14 @@
     --color5: #2D142C;
 }
 
-body {
+/* body {
     margin: 0;
     padding-top: 40px;
     color: var(--color5);
     background: #f5f6fa;
     position: relative;
     height: 100%;
-}
+} */
 
 .config-micuenta .perfil-usuario {
     margin: 0 0 1rem 0;
@@ -41,14 +41,38 @@ body {
     color: var(--color5);
 }
 
+h2, h6 {
+    color: var(--color4) !important;
+}
+
 .form-control {
     border: 2px solid #cfd1d8;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 4px;
     font-size: .825rem;
     background: #ffffff;
     color: #2e323c;
+}
+
+.btn {
+    background-color: var(--color5) !important;
+    color: whitesmoke;
+    border: 2px solid #fff;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    transition: background-color 0.2s ease-out,
+    color 0.2s ease-out;
+}
+
+
+.btn:hover,
+.btn:active {
+  background-color: #fff;
+  color: var(--color1);
+  transition: background-color 0.3s ease-in,
+              color 0.3s ease-in;
 }
 
 .card {
