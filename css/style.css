@@ -4,7 +4,10 @@
   --color3: #801336;
   --color4: #510A32;
   --color5: #2D142C;
+  --gradient: linear-gradient(to right top, #ee4540, #c12c4e, #8e224e, #5b1d43, #2d142c);
 }
+
+/* background-image: linear-gradient(to right top, #ee4540, #c12c4e, #8e224e, #5b1d43, #2d142c); */
 
 *{
     margin: 0;
@@ -94,3 +97,95 @@
 .about-info h3{
   color: var(--color5);
 }
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+::selection{
+  color: #fff;
+  background: #1cc7d0;
+}
+.wrapper{
+  height: 300px;
+  width: 220px;
+  position: relative;
+  transform-style: preserve-3d;
+ perspective: 1000px;
+}
+.wrapper .card{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  background: #fff;
+  border-radius: 10px;
+  transform: translateY(0deg);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+  transition: transform 0.7s cubic-bezier(0.4,0.2,0.2,1);
+}
+.wrapper:hover > .front-face{
+  transform: rotateY(-180deg);
+}
+.wrapper .card img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.wrapper .back-face{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  transform: rotateY(180deg);
+}
+.wrapper:hover > .back-face{
+  transform: rotateY(0deg);
+}
+.wrapper .back-face img{
+  height: 100px;
+  width: 100px;
+  padding: 5px;
+  border-radius: 50%;
+  background: linear-gradient(to right top, #ee4540, #c12c4e, #8e224e, #5b1d43, #2d142c);
+}
+.wrapper .back-face .info{
+  text-align: center;
+}
+.back-face .info .title{
+  font-size: 20px;
+  font-weight: 500;
+}
+.back-face ul{
+  display: flex;
+}
+.back-face ul a{
+  display: block;
+  height: 40px;
+  width: 40px;
+  color: #fff;
+  text-align: center;
+  margin: 0 5px;
+  line-height: 38px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background: linear-gradient(to right top, #ee4540, #c12c4e, #8e224e, #5b1d43, #2d142c);
+  transition: all 0.5s ease;
+}
+.back-face ul a:hover{
+  color: var(--color5);
+  border-color: var(--color5);
+  background: linear-gradient(375deg, transparent, transparent);
+}
+
+.about-section{
+    margin-top: 30px;
+  }
+  
