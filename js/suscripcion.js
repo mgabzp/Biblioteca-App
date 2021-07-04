@@ -2,11 +2,17 @@
 //INICIO TEMPLATE MODAL SUSCRIPCION
 
 let uConectado = JSON.parse(localStorage.getItem("conectado")) || null;
-// let uSuscripto = JSON.parse(localStorage.getItem("suscripto")) || null;
+let usuarios = JSON.parse(localStorage.getItem("usuarios"));
 
 
 function confirmarSuscripcion(){
+    uConectado.suscripto=true;
+    let encontrado = usuarios.indexOf(uConectado);
+  usuarios.splice(encontrado, 1, uConectado);
+  localStorage.setItem("usuarios", JSON.stringify(usuarios));
+  localStorage.setItem("conectado", JSON.stringify(uConectado));
     sendEmail(uConectado.nombre, uConectado.email)
+    
 }
 
 

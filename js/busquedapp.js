@@ -55,18 +55,15 @@ function cargarTabla(array) {
   });
 }
 
-function filterTabla() {
-  let texto = document.querySelector("#textBuscar");
-  filtrados = libros.filter(function (libro) {
-    return libro.titulo.toUpperCase().indexOf(texto.value.toUpperCase()) > -1;
-  });
-  limpiarTabla();
-  cargarTabla(filtrados);
-}
+// function filterTabla() {
+//   let texto = document.querySelector("#textBuscar");
+//   filtrados = libros.filter(function (libro) {
+//     return libro.titulo.toUpperCase().indexOf(texto.value.toUpperCase()) > -1;
+//   });
+//   limpiarTabla();
+//   cargarTabla(filtrados);
+// }
 
-function limpiarTabla() {
-  document.querySelector("#contenedor").innerHTML = "";
-}
 
 
 
@@ -104,8 +101,13 @@ function filterTabla() {
       libroBuscado=libros.filter(function(libro){
           return libro.categoria.toUpperCase().indexOf(texto.value.toUpperCase())>-1  })
   }else{
+    libroBuscadoCat=libros.filter(function(libro){
+      return libro.categoria.toUpperCase().indexOf(texto.value.toUpperCase())>-1  })
+      libroBuscadoTit=libros.filter(function(libro){
+        return libro.titulo.toUpperCase().indexOf(texto.value.toUpperCase())>-1  }) 
       limpiarTabla()
-      cargarTabla(libros)
+      cargarTabla(libroBuscadoCat)
+      cargarTabla(libroBuscadoTit)
       return
   }
 
