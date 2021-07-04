@@ -10,73 +10,45 @@ root{
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800,300italic,400italic,600italic,700italic,800italic);
 body {
-  /* background: linear-gradient(rgba(30, 27, 38, 0.95), rgba(30, 27, 38, 0.95)); */
   background: linear-gradient(to right top, #ee4540, #c12c4e, #8e224e, #5b1d43, #2d142c);
   background-position: center;
   background-size: cover;
   background-repeat: repeat;
 }
-.container {
+
+
+
+
+/* .container {
   width: 100%;
   height: 100%;
-}
-/* .row-libros {
- 
-  width: 375px;
-  height: 650px;
-  background-color: #1e1b26;
-  margin: 60px auto 0 auto;
-  box-shadow: 5px 5px 115px -14px black;
-  border-radius: 4px;
-  display: flex;
-  justify-content: center;  */
-  
- 
-
-/* .div-padre{
-    margin: 0;
-    padding: 0; */
-
-/* .div-padre > div{
-display: block;
-margin: 10px;
-width: 20vw;
 } */
-/* .menu {
-  position: absolute;
-  right: 12px;
-  top: 6px;
-  z-index: 999;
-}
-.menu i {
-  font-size: 40px;
-  color: #fe4141;
-  filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.5));
-} */
+
 .libro-img {
   width: 100%;
   height: 300px;
-  /* background-image: url(https://i.ibb.co/FDGqCmM/papers-co-ag74-interstellar-wide-space-film-movie-art-33-iphone6-wallpaper.jpg); */
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size:cover;
   z-index: 111 !important;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-  /* webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, black), color-stop(0.35, black), color-stop(0.5, black), color-stop(0.65, black), color-stop(0.85, rgba(0, 0, 0, 0.6)), color-stop(1, rgba(0, 0, 0, 0)));  */
   position: relative;
   object-fit: cover;
-/* width: 100%; */
-background-size: 100%;
-width: auto;
-}
+  background-size: 100% 100%;
 
+
+}
+ .destacados{
+
+ text-align: center;
+ font-family: 'Montserrat', sans-serif;
+ color: #e7e7e7;
+
+ }
 
 .Libro {
-  /* background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 38%, rgba(255, 255, 255, 0.06) 39%, rgba(30, 27, 38, 0.88) 53%, #1e1b26 55%);
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 38%, rgba(255, 255, 255, 0.06) 39%, rgba(30, 27, 38, 0.88) 53%, #1e1b26 55%);
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 38%, rgba(255, 255, 255, 0.06) 39%, rgba(30, 27, 38, 0.88) 53%, #1e1b26 55%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#1e1b26',GradientType=0); */
+
   background: linear-gradient(to right top, #ee4540, #c12c4e, #8e224e, #5b1d43, #2d142c);
   position: relative;
   background-size: contain;
@@ -86,12 +58,12 @@ width: auto;
   height: 650px;
   display:block;
   border-radius: 4px;
-  margin-left: 90px;
+  /* margin-left: 90px; */
   margin-top: 20px;
   margin-bottom: 20px;
     
 }
-.text-libro-cont {
+/* .text-libro-cont {
   padding: 0px 12px;
   text-align: justify;
 }
@@ -120,10 +92,16 @@ width: auto;
 .action-row {
   margin-top: 24px;
 }
-.summary-row {
+/* .summary-row {
   margin-top: 12px;
-}
+}  */
+/* summary-row {
+  margin-top: 40px;
+} */
+
+
 /* TYPOGRAPHY STARTS */
+
 /* Fonts */
 h1, h2, h3, h4, h5 {
   font-family: 'Montserrat', sans-serif;
@@ -131,8 +109,8 @@ h1, h2, h3, h4, h5 {
   margin: 0px;
 }
 h1 {
-  font-size: 36px;
-  font-weight: 400;
+  font-size: 20px;
+  /* font-weight: 400; */
 }
 h3 {
   font-size: 14px;
@@ -173,12 +151,12 @@ h5 {
   float: left;
   line-height: 1;
 }
-.libro-details {
+/* .libro-details {
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   font-weight: 300;
   color: #b4b4b4;
-}
+} */
 .libro-description {
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
@@ -196,30 +174,38 @@ h5 {
 }
 /* TYPOGRAPHY ENDS */
 /** GRID STARTS **/
-.thegrid {
+/* .thegrid {
   margin: 0 auto;
 }
 .elements-distance, .libro-details, .libro-description, .libro-autor {
   margin: 0px;
-}
+} */
 .mr-grid {
   width: 100%;
 }
-.mr-grid:before, .mr-grid:after {
+/* .mr-grid:before, .mr-grid:after {
   content: "";
-  display: table;
-}
+  display: table; */
+/* }
 .mr-grid:after {
   clear: both;
-}
+} */
 .mr-grid {
   *zoom: 1;
 }
-.col1, .col2, .col3, .col3rest, .col4, .col4rest, .col5, .col5rest, .col6, .col6rest {
+.col1{
   margin: 0% 0.5% 0.5% 0.5%;
   padding: 1%;
   float: left;
   display: block;
+}
+
+.col2 {
+  margin: 10% 0.5% 0.5% 0.5%;
+  padding: 1%;
+  float: left;
+  display: block;
+
 }
 /* Columns match, minus margin sum. E.G. margin-left+margin-right=1%, col2=50%-1% - added padding:1%*/
 .col1 {
@@ -228,7 +214,7 @@ h5 {
 .col2 {
   width: 47%;
 }
-.col3 {
+/* .col3 {
   width: 30.3333333333%;
 }
 .col4 {
@@ -239,9 +225,9 @@ h5 {
 }
 .col6 {
   width: 13.6666666667%;
-}
+} */
 /* Columns match with their individual number. E.G. col3+col3rest=full width row */
-.col3rest {
+/* .col3rest {
   width: 63.6666666667%;
 }
 .col4rest {
@@ -260,4 +246,4 @@ h5 {
   bottom: 15px;
   right: 15px;
   border-radius: 50px;
-}
+} */
