@@ -10,7 +10,8 @@ root{
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800,300italic,400italic,600italic,700italic,800italic);
 body {
-  background: linear-gradient(to right top, #ee4540, #c12c4e, #8e224e, #5b1d43, #2d142c);
+  /* background: linear-gradient(to right top, #ee4540, #c12c4e, #8e224e, #5b1d43, #2d142c); */
+  background-image: linear-gradient(to top, #2d142c, #33142e, #3a1330, #411131, #480f32, #581037, #68103b, #79113e, #971943, #b62446, #d33345, #ee4540);
   background-position: center;
   background-size: cover;
   background-repeat: repeat;
