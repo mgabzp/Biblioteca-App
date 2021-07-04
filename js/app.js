@@ -58,7 +58,7 @@ function cargarCards(categoria)
         return libro1.titulo === libro
       })
       let card = document.createElement('div')
-      card.classList.add("Libro")
+      card.classList.add("Libro", "col-md-3")
       card.innerHTML =`
       
             <div class="libro-img" style="background-image: url(http://4.bp.blogspot.com/_JX0mJgkbNS0/THgN3lW3W8I/AAAAAAAAAAc/A-HjrEokOOg/s1600/cronica+de+una+muerte+anunciada.jpg);"></div>
