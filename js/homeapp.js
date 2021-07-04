@@ -10,8 +10,8 @@ const cerrarSesion = function () {
 };
 
 function revisarSesion() {
-  document.querySelector("#usuarioBoton").style.visibility = "hidden";
- document.querySelector("#cerrarBoton").style.visibility = "hidden";
+  document.querySelector("#perfilBtn").style.visibility = "hidden";
+ 
 
   if (!conectado) {
     setTimeout(function () {
@@ -19,9 +19,8 @@ function revisarSesion() {
     }, 10000);
   } else {
     document.querySelector("#sesBoton").style.visibility = "hidden";
-    document.querySelector("#usuarioBoton").style.visibility = "visible";
-    document.querySelector("#cerrarBoton").style.visibility = "visible";
-    document.querySelector("#perfLink").innerText = conectado.nombre;
+    document.querySelector("#perfilBtn").style.visibility = "visible";
+    document.querySelector("#perfilBtn").innerText = conectado.nombre;
     if (conectado.email === "adminbiblioteca@gmail.com") {
       //!habilitar botones admin
     }
