@@ -27,6 +27,8 @@ const guardarCambios = function (e){
 
 
 
+
+
 /*revisar sesion*/
 const cerrarSesion = function () {
     localStorage.removeItem('conectado');

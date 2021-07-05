@@ -1,7 +1,7 @@
 let libros = JSON.parse(localStorage.getItem("libros")) || [];
 let conectado = JSON.parse(localStorage.getItem("conectado")) || null;
 let usuarioss = JSON.parse(localStorage.getItem('usuarios'))||[];
-// revisarSesion();
+revisarSesion();
 cargarTabla(libros);
 
 function cargarTabla(array) {
