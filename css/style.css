@@ -37,14 +37,13 @@
   border-radius: 10px;
 }
 
-.cardPreview-avatar{
 
-}
- 
 .cardPreview-text{
   color: black;
 }
-
+.cargaLibro{
+  margin-top: 15vh;
+}
 .cargarBody{
    background-image: linear-gradient(to right top, #ee4540, #d33541, #b8283f, #9c1c3c, #801336);
     height: 100%;
@@ -76,7 +75,7 @@
 }
 
 .contactMain{
-  margin-top: 10vh;
+  margin-top: 15vh;
 }
 
 .contact{

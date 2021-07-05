@@ -1,5 +1,7 @@
 //Traigo datos del LocalStorage en caso de haberlo
-let libros = JSON.parse(localStorage.getItem('libros')) || []
+let libros = JSON.parse(localStorage.getItem("libros"));
+let conectado = JSON.parse(localStorage.getItem("conectado")) || null;
+let usuarioss = JSON.parse(localStorage.getItem('usuarios'));
 let formulario = document.querySelector('form')
 let otraCategoria = document.querySelector('#otraCategoria').addEventListener('change', (event) => {
     otraCategoria = event.target.value
@@ -78,33 +80,29 @@ const cerrarSesion = function () {
     location.replace("/html/home.html");
   };
   
+  /*funcion que controla quién está conectado*/
   function revisarSesion() {
     document.querySelector("#perfilBtn").style.visibility = "hidden";
-    document.querySelector(".soloAdmin").style.visibility = "hidden"
+    document.querySelector(".soloAdmin").style.visibility = "hidden";
   
-    if (conectado) {
-            let nombre=conectado.nombre+" "
+    if (conectado && conectado.email === "adminbiblioteca@gmail.com") {
+          let nombre=conectado.nombre+" "
             let espacio = nombre.indexOf(" ");
              
             nombre =nombre.slice(0,espacio);
-            
-            
-        
-    
-      document.querySelector("#sesBoton").style.visibility = "hidden";
-      document.querySelector("#perfilBtn").style.visibility = "visible";
-      document.querySelector("#perfilBtn").innerText =nombre;
-      if (conectado.email === "adminbiblioteca@gmail.com") {
+        document.querySelector("#sesBoton").style.visibility = "hidden";
+         document.querySelector("#perfilBtn").style.visibility = "visible";
+        document.querySelector("#perfilBtn").innerText =nombre;
         document.querySelector(".soloAdmin").style.visibility = "visible"
         document.querySelector(".soloUsuario").style.visibility = "hidden"
-      }
-    } else {
-      setTimeout(function () {
+      }else{
         swal(
-          "Hola Forastero!",
-          "Registrate o inicia sesión para poder alquilar libros, votar o suscribirte",
-          "info"
-        );
-    }, 10000);
-  }
+            "Acceso restringido",
+            "Contenido solo disponible para administradores, serás redirigido a nuestra página de inicio",
+            "error"
+          );
+          setTimeout(function () {
+            location.replace("/html/home.html");
+        }, 4000)
+      }
   }
