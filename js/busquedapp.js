@@ -91,15 +91,19 @@ function filterTabla() {
       cargarTabla(libros)
       return
   }
-
-  if(libroBuscado.length == 0){
-     swal(
-      "Oh no! El libro que buscas no está en nuestra colección",
-      "Por el momento no contamos con el libro que estás buscando",
-      "error"
-    );
-  }
+  if(libroBuscado.length !== 0){
+    limpiarTabla()
+    cargarTabla(libroBuscado)
+}else{
+  swal(
+    "Oh no! El libro que buscas no está en nuestra colección",
+    "Por el momento no contamos con el libro que estás buscando",
+    "error"
+  );
 }
+}
+
+  
 
 
 
