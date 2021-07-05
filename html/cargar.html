@@ -132,38 +132,13 @@
     </header>
 
     <main class="cargaLibro soloAdmin">
-      <h1>Carga de libro</h1>
+      
       <!-- ********************Vista previa del libro******************** -->
       <div class="container">
         <div class="row">
-          <div class="col-md-3">
-            <div class="cardPreview">
-              <div class="text-center">
-                <img
-                  class="img_card card-img-top mt-3"
-                  src="https://st3.depositphotos.com/1008406/14264/v/1600/depositphotos_142647707-stock-illustration-blank-empty-book-cover.jpg"
-                  alt="..."
-                />
-              </div>
-              <div class="card-body">
-                <p class="cardPreview-textt">
-                  <strong>Titulo: </strong><span id="tituloCard"></span>
-                </p>
-                <p class="cardPreview-text">
-                  <strong>Editorial: </strong><span id="editorialCard"></span>
-                </p>
-                <p class="cardPreview-text">
-                  <strong>Categoria: </strong><span id="categoriaCard"></span>
-                </p>
-                <p class="cardPreview-text">
-                  <strong>Año emision: </strong><span id="emisionCard"></span>
-                </p>
-                <a onclick="vistaPrevia()" class="btn btn-block btnContact"
-                  >Vista previa</a
-                >
-              </div>
-            </div>
-          </div>
+          <div class="col-md-3 d-flex align-items-center justify-content-center cargarImg">
+            <img src="/img/book-img.png" style="height: 60%" alt="">
+           </div>
           <!-- ********************Formulario de carga de libros******************** -->
           <div class="col-md-8 offset-md-1 cargarForm">
             <form

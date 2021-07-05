@@ -1,0 +1,333 @@
+:root{
+    --color1: #EE4540;
+    --color2: #C72C41;
+    --color3: #801336;
+    --color4: #510A32;
+    --color5: #2D142C;
+}
+
+/* Estilo Mi Cuenta  */
+
+.config-micuenta .perfil-usuario {
+    margin: 0 0 1rem 0;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+.config-micuenta .perfil-usuario .avatar-usuario {
+    margin: 0 0 1rem 0;
+}
+.config-micuenta .perfil-usuario .avatar-usuario img {
+    width: 90px;
+    height: 90px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    margin-top: 10px;
+}
+.config-micuenta .perfil-usuario h5.nombre-usuario {
+    margin: 0 0 0.5rem 0;
+    color: rgb(46, 19, 34);
+}
+
+.config-micuenta .perfil-usuario h2.email-usuario {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.tit-micuenta, 
+.tit-cambiarPass {
+    color: rgba(255, 255, 255, 0.295);
+}
+
+.card {
+    background: transparent;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 0;
+    margin-bottom: 1rem;
+}
+
+/* Fin estilo Mi Cuenta */
+
+/* Estilo registro GabyN */
+#micuentaMain{
+    padding-top: 10vh;
+}
+#micuentaBody{
+    background-image: linear-gradient(to top, #2d142c, #33142e, #3a1330, #411131, #480f32, #581037, #68103b, #79113e, #971943, #b62446, #d33345, #ee4540);
+    height: 100%;
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    color: white;
+    
+}
+#btnSubmit-miCuenta{
+background-color: var(--color3);
+font-size: 1rem;
+border-radius: 25px;
+margin-top: 30px;
+transition-property: background-color;
+ transition-duration: 0.5s;
+}
+#btnSubmit-miCuenta:hover{
+    background-color: rgb(46, 19, 34);
+}
+
+#btnSubmit-miCuenta2{
+    background-color: var(--color3);
+    font-size: 1rem;
+    border-radius: 25px;
+    margin-top: 30px;
+    transition-property: background-color;
+     transition-duration: 0.5s;
+}
+#btnSubmit-miCuenta2:hover{
+        background-color: rgb(46, 19, 34);
+}
+.cuentaField{
+    background-color: rgba(255, 255, 255, 0.295);
+   border-radius: 18px;
+   color: whitesmoke !important;
+  
+}
+
+.cuentaField:hover{
+    background-color: rgba(255, 255, 255, 0.096);
+}
+.cuentaField:active{
+    background-color: rgba(255, 255, 255, 0.137);
+    color: ivory;
+}
+.cuentaField:focus-within{
+    background-color: rgba(255, 255, 255, 0.137);
+}
+
+
+
+.cuentaField::placeholder{
+    font-size: 1.1rem;
+    color: white;
+    
+}
+
+.form-group-cuenta{
+    margin-bottom: 5px;
+}
+.form-group-cuenta a{
+text-decoration: none;
+color: rgb(245, 196, 196);
+font-weight: 650;
+transition-property: font-size;
+ transition-duration: 0.5s;
+    
+}
+
+.form-group-cuenta a:hover{
+    font-size: 1.2rem ;
+}
+
+
+
+.form-group-cuenta span{
+    font-weight: 600;
+}
+.divLogin{
+    padding-top: 5px;
+    background-color: #510a327a;
+    border-radius: 30px;
+}
+.divCuenta{
+    padding-top: 5px;
+    background-color: #510a32ad;
+    border-radius: 30px;
+}
+/* Estilo header */
+
+
+#gaHeader{
+    font-family: 'Roboto Mono', monospace;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: #2d142c9c;
+    transition: background-color 500ms, color 500ms;
+    
+}
+#gaNavbar{
+    height: 10vh;
+}
+#gaColBtn{
+    color: white;
+}
+.gaNavCol,
+#gaLista {
+    background-color: var(--color5) ;
+    text-align: center;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    
+     
+  }
+
+
+#gaHeader.colorear{
+background-color: var(--color4);
+
+}
+#gaLista{
+    margin-left: 3vw;
+    margin-top: 3vh;
+}
+#susBtn{
+    margin-top: 3vh;
+    margin-left: 1vw;
+    background-color: var(--color2);
+    border: 1px solid var(--color5);
+    transition-property: transform;
+    transition-duration: 0.5s;
+  
+    
+}
+#susBtn:hover{
+    transform: scale(1.1);
+}
+
+#gacontenedor{
+    margin: 0;
+    padding: 0;
+}
+
+
+#navbarNav{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 0;
+    height: 20vh;
+    background-color: transparent;
+    
+}
+
+.gaItem {
+    margin-top: 2vh;
+    margin-bottom: 0;
+    padding: 0;
+    height: fit-content;
+    transition-property: transform;
+    transition-duration: 0.5s;
+    
+}
+.gaItem:hover{
+    transform: scale(1.15);
+}
+#gaLista .gaItem a{
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    
+}
+.activado{
+    border-bottom: 2px solid var(--color2);
+
+    font-weight: bold;
+}
+#logoNav{
+   position: fixed;
+   top: 2vh;
+   right: 5vw;
+    height: 7vh;
+}
+#logoNavG{
+    position: fixed;
+    top: 2vh;
+    right: 5vw;
+     height: 8vh;
+ }
+
+ #perfilBtn, #perfilDd{
+    background-color: #5f1844f1;
+    color: white;
+    font-size: small;
+    font-weight: 550;
+}
+#perfilDd > .dropdown-item:hover{
+    background-color: #ad367ff1;
+    border-radius: 20px;
+}
+#perfilDd a{
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+}
+#btnSes{
+padding: 0;
+margin-top: 2.2vh;
+margin-bottom: 0;
+padding: 0;
+height: fit-content;
+
+}
+/* Fin estilo header */
+
+
+/* Estilo footer  */
+
+.footer-wrap {
+    /* font-family:-apple-system,"BlinkMacSystemFont","Segoe UI","Roboto","Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; */
+    width: 100%;
+    padding-top: 80px;  
+    padding-bottom: 20px;
+    background-color: var(--color5);
+    color: white;
+  }
+  .footer-img{
+    width: 13vw;
+  }
+  .column2 img {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+  }
+  .column2 .row {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+  }
+  .column2{
+    padding-right:30px;
+    padding-left: 60px;
+  }
+  .bi-facebook::before{
+  margin-right: 10px;
+  }
+  .bi-twitter::before{
+    margin-right: 10px;
+  }
+  .bi-instagram::before{
+    margin-right: 10px;
+  }
+  .bi-youtube::before{
+  margin-right: 10px;
+  }
+  .legales{
+    color: rgb(12, 108, 140);
+  }
+  .column3{
+   color:white;
+   padding: 0;
+  }
+  .bi-telephone-inbound::before{
+   margin-right: 17px;
+  }
+  .bi-geo-alt::before{
+   margin-right: 17px;
+  }
+  .bi-envelope::before {
+    margin-right: 17px;
+  }
+
+ 

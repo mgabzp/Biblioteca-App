@@ -24,7 +24,7 @@
    })();
    </script>
  <!--fin email js-->
-   <link rel="stylesheet" href="/css/style.css" />
+ <link rel="stylesheet" href="/css/error.css">
    <link
    rel="stylesheet"
    href="/css/screen768.css"
@@ -33,7 +33,7 @@
     
     <title>Biblioteca Digital</title>
   </head>
-  <body>
+  <body id="errorBody">
     <header id="gaHeader">
       <nav class="navbar navbar-expand-md" id="gaNavbar">
         <div class="container" id="gacontenedor">
@@ -71,7 +71,7 @@
                         <a class="dropdown-item " id="cerrarLink" onclick="cerrarSesion()" href="#">Cerrar sesión</a>
                       </div>
                   </div>
-                             </li>
+                </li>
                 
                 <li class="nav-item activado gaItem">
                   <a class="nav-link" href="#"
@@ -112,6 +112,13 @@
         >
       </nav>
     </header>
+
+    <section class="error-mensaje">
+      <section class="error-mensaje__container">
+          <h1 id="Error" class="animated bounce">Error 404</h1>
+          <p id="notFound">Página no encontrada</p>
+      </section>
+ </section>
   
   
     <script

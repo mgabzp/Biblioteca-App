@@ -15,32 +15,11 @@
 }
 
 /*------------------------ CARGAR STYLE ------------------------*/
-/* .cardB{
-    margin: 20px;
+.cargarImg{
+  height: 80vh;
 }
 
 
-  
-  .card_avatar {
-    width: 18rem;
-  } */
-
-.imgCardPreview {
-    width: 100%;
-    height: 40%;
-    object-fit: cover;
-}
-
-.cardPreview{
-  height: 93%;
-  background-color: #510a327a;
-  border-radius: 10px;
-}
-
-
-.cardPreview-text{
-  color: black;
-}
 .cargaLibro{
   margin-top: 15vh;
 }
@@ -67,8 +46,7 @@
 
 .contactBody{
   background-image: url("https://trello-attachments.s3.amazonaws.com/60ce57f960265277870debba/960x710/309d508485ddef28cc49c4e0f00b1f40/still-life-690705_960_720.jpg");
-  height: 100%;
-  background-position: center;
+  /* background-position: center; */
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
@@ -136,6 +114,112 @@ transition-property: background-color;
 
 #about-body span{
   font-weight: bold;
+}
+
+#susBtn{
+  margin-top: 3vh;
+  margin-left: 1vw;
+  background-color: var(--color2);
+  border: 1px solid var(--color5);
+  transition-property: transform;
+  transition-duration: 0.5s;
+  
+}
+#susBtn:hover{
+  transform: scale(1.1);
+}
+
+.modal-sus,
+.fade-sus,
+.show {
+    background-color: rgb(29, 27, 27);
+    padding-left: 15px;
+    padding-right: 15px
+}
+
+h2  .modalsus {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #000
+}
+
+.modal-content-sus {
+    border: none;
+    background: transparent;
+    padding: 0 19px
+}
+
+.close-sus {
+    position: relative;
+    top: 48px;
+    left: 13px;
+    z-index: 1;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1;
+    color: black
+}
+
+.modal-header-sus {
+    border: none
+}
+
+.modal-header-sus .close-sus {
+    padding: 0rem 1rem !important;
+    margin: -1rem -1rem -1rem auto
+}
+
+.modal-body-sus {
+    border: none;
+    background-color: white;
+    padding-bottom: 5px
+}
+
+.close-sus.focus,
+.close-sus:focus {
+    outline: 0;
+    box-shadow: none !important
+}
+
+.form-control-sus {
+    width: 80%;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 0.5px 0px 0px #dae0e5 !important;
+    color: #63686c;
+    font-weight: bold;
+    font-size: 12px
+}
+
+.form-control-sus.focus {
+    border: none;
+    border-color: #fff;
+    border-bottom: 1px solid #000;
+    outline: 0;
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, .25)
+}
+
+@media (min-width:599px) {
+    .modal-dialog-sus {
+        max-width: 47rem
+    }
+
+    .details-sus {
+        padding: 60px 0 40px 50px
+    }
+
+    /* .text-muted a {
+        color: #c0bfbf;
+        font-weight: bold;
+        text-decoration: underline
+    } */
+
+    small.para-sus {
+        font-weight: bold;
+        font-size: 14px;
+        color: #63686c
+    }
 }
 
 .about-section{
