@@ -1,0 +1,1 @@
+//! Acá iría la animación para el index

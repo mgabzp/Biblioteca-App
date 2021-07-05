@@ -12,7 +12,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
 
 /*------------------------ CARGAR STYLE ------------------------*/
@@ -82,7 +81,7 @@
 
 .contactForm{
   /* height: 50vh; */
-  background-color: #510a327a;
+  background-color: #510a328a;
   border-radius: 30px;
 }
 

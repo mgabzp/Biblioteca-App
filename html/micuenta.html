@@ -1,4 +1,3 @@
-</html>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,7 +25,7 @@
     <!--fin email js-->
     <title>Biblioteca Digital</title>
   </head>
-  <body class="contactBody">
+  <body>
       <header>
     <nav class="navbar navbar-expand-md navbar-light">
       <div class="container">
@@ -55,6 +54,9 @@
             <li class="nav-item" id="cerrarBoton">
              <button class="btn-danger" id="cerrarLink" onclick="cerrarSesion()">x</button>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Mi cuenta</a>
+              </li>
             <li class="nav-item activado">
               <a class="nav-link" href="#"
                 >Inicio <span class="sr-only">(current)</span></a
@@ -90,38 +92,7 @@
         >
     </nav>
   </header>
-      <main class="contactMain">
-    <!-- ********************TEXTO O IMAGEN DE CONTACTANOS******************** -->
-  <div class="container">
-    <div class="row">
-        <div class="col-md-5 d-flex align-items-center justify-content-center contact">
-         <img src="/img/logo-w.png" style="height: 80%" alt="">
-        </div>
-    <!-- ********************FORMULARIO PARA ENVIAR CONSULTA******************** -->
-        <div class="col-md-6 contactForm">
-          <h5 class="text-center mt-3">CONTACTANOS</h5>
-          <form class="needs-validation mt-3" onsubmit="handleSubmit(event)" novalidate>
-            <div class="form-group">
-              <input type="text" class="form-control contactField" id="nombreConsulta" name="nombre"  placeholder="Nombre" required>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control contactField" id="apellidoConsulta" name="apellido" placeholder="Apellido" required>
-            </div>
-            <div class="form-group">
-              <input type="email" class="form-control contactField" id="imagenCarga" name="email" placeholder="Ingrese un email valido">
-            </div>
-            <div class="form-group">
-              <textarea class="form-control contactField" id="contraportadaCarga" rows="3" name="consulta" required placeholder="Su consulta"></textarea>
-            </div>
-      
-            <button class="btn btn-block btnContact">Enviar</button>
-          </form>
-        </div>
-    </div>
-</div>
-
-      </main>
-       <!--Comienzo de modal suscripción
+  <!--Comienzo de modal suscripción
        NO SEPARAR DE NAVBAR-->
 
 
@@ -180,22 +151,113 @@
          </div>
        </div>
      </div>
-  
+   </div>
    
    <!--Fin de modal suscripción-->
-      <footer>
+  <!--Inicio seccion mi cuenta-->
+  <main>
+    <section>
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col col-md-6">
+                <h2 class="card-header">MI CUENTA</h2>
+              <div class="card">
+                <div class="card-body">
+                  <form
+                    onsubmit="guardarCambios(event)"
+                    class="needs-validation"
+                    novalidate
+                  >
+                    <div class="form-group">
+                      <label>Nombre</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="nombre"
+                        id="nombre"
+                        onchange="actualizar(event)"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label>Email</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        name="email"
+                        id="userEmail"
+                        onchange="actualizar(event)"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label>Teléfono</label>
+                      <input
+                        type="phone"
+                        class="form-control"
+                        name="telefono"
+                        required
+                        onchange="actualizar(event)"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label>Nacionalidad</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="nacionalidad"
+                        onchange="actualizar(event)"
+                      />
+                    </div>
 
-      </footer>
-
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-    <script src="https://use.fontawesome.com/823835b326.js"></script>
-   
+                    <button class="btn btn-info" id="btnSubmit">Guardar</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  </main>
+  <footer></footer>
+  
   
   <script src="/js/suscripcion.js"></script>
-    
-   >
-
+  <script src="/js/micuenta.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://use.fontawesome.com/823835b326.js"></script>
+    <script>
+        (function () {
+          "use strict";
+          window.addEventListener(
+            "load",
+            function () {
+              var campos = document.getElementsByClassName("needs-validation");
+  
+              var validar = Array.prototype.filter.call(campos, function (form) {
+                form.addEventListener(
+                  "submit",
+                  function (event) {
+                    if (form.checkValidity() === false) {
+                      event.preventDefault();
+                      event.stopPropagation();
+                    }
+                    form.classList.add("was-validated");
+                  },
+                  false
+                );
+              });
+            },
+            false
+          );
+        })();
+      </script>
 </body>
 </html>
