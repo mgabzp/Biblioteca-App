@@ -1,13 +1,4 @@
 :root{
-<<<<<<< HEAD
-    --color1: #EE4540;
-    --color2: #C72C41;
-    --color3: #801336;
-    --color4: #510A32;
-    --color5: #2D142C;
-}
-
-=======
   --color1: #EE4540;
   --color2: #C72C41;
   --color3: #801336;
@@ -16,7 +7,6 @@
 }
 
 /* background-image: linear-gradient(to right top, #ee4540, #c12c4e, #8e224e, #5b1d43, #2d142c); */
->>>>>>> mauPC
 
 *{
     margin: 0;
@@ -47,11 +37,7 @@
   border-radius: 10px;
 }
 
-<<<<<<< HEAD
-/*MODAL SUSCRIPCION CSS */
-=======
 .cardPreview-avatar{
->>>>>>> mauPC
 
 }
  
@@ -282,7 +268,6 @@ transition-property: background-color;
     margin-top: 30px;
   }
   
-<<<<<<< HEAD
   .card_avatar {
     width: 18rem;
   }
@@ -417,5 +402,3 @@ height: fit-content;
 
 }
 /* Fin estilo header */
-=======
->>>>>>> mauPC
