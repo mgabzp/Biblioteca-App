@@ -30,7 +30,7 @@
     <title>Biblioteca Digital</title>
   </head>
   <body>
-    <header id="gaHeader">
+    <header class="mb-4" id="gaHeader">
       <nav class="navbar navbar-expand-md" id="gaNavbar">
         <div class="container" id="gacontenedor">
           <button
@@ -109,7 +109,7 @@
       </nav>
     </header>
     
-    <main id="mainBus">
+    <main class="mt-5" id="mainBus">
       <br />
       <br />
       <div class="input-group mb-3">
@@ -120,7 +120,7 @@
           </select>
           
         <input type="text" class="form-control" aria-label="Text input with dropdown button" id="textBuscar">
-        <button class="btn btn-outline-info" type="button" onclick="filterTabla()">Buscar</button>
+        <button class="btn btn-outline-info" type="button" id="btnBusc" onclick="filterTabla()">Buscar</button>
 
       </div>
       <br />
@@ -240,10 +240,10 @@
                  <strong>Descripción: </strong><span id="descLibro"></span>
                </p>
                <div class="soloAdmin">
-                <button class="btn-info  btn-block" id="modifBtn">Modificar</button>
-                <button class="btn-danger  btn-block" id="elimBtn">Eliminar</button>
+                <button class="btn-info  btn-block soloAdmin" id="modifBtn">Modificar</button>
+                <button class="btn-danger  btn-block soloAdmin" id="elimBtn">Eliminar</button>
               </div >
-              <div class="soloUsuario"><button class="btn-info btn-block" id="alquilar"">Alquilar</button></div>
+              <div class="soloUsuario"><button class="btn-info btn-block soloUsuario" id="alquilarLib"">Alquilar</button></div>
              </div>
            </div>
          </div>
@@ -273,15 +273,16 @@ Modal modificar libro -->
  aria-hidden="true"
 >
 
- <div class="modal-dialog-lg modalModifi">
+ <div class="modal-dialog modalModifi">
    <div class="modal-content modalModifi">
      <div class="modal-header modalModifi">
        <h3 class="modal-title" >ID Libro: <span id="modifId"></span></h3>
        <button
          type="button"
          class="close"
-         data-dismiss="modal"
+         data-dismiss="modalModif"
          aria-label="Close"
+         onclick="cerrarModal()"
        >
          <span aria-hidden="true">&times;</span>
        </button>
@@ -368,6 +369,15 @@ Modal modificar libro -->
      </div>
      <div class="modal-footer modalModifi">
       
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-dismiss="modal"
+        id="infoCerrar"
+        onclick="cerrarModal()">
+          Cerrar
+        </button>
+      
      </div>
    </div>
  </div>
@@ -377,7 +387,7 @@ Modal modificar libro -->
 </footer>
 
 <script src="/js/busquedapp.js"></script>
-<script src="/js/suscripcion.js"></script>
+
 
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

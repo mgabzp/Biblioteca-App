@@ -3,7 +3,7 @@ let conectado = JSON.parse(localStorage.getItem("conectado")) || null;
 let perfil = conectado
 
 vistaPerfil()
-
+revisarSesion()
 let formulario = document.querySelector('form')
 let formularioPass = document.querySelector('#form2')
 
@@ -76,12 +76,12 @@ function vistaPerfil(){
     document.querySelector('#email').value= conectado.email
     document.querySelector('#imagenPerfil').value= conectado.imagen
 
+//     if(conectado.alquileres!==[]){
+//       for(i=1;i=alquileres.length;i++){
     
-    // document.querySelector('.libro1').value = conectado.alquileres
-    // document.querySelector('.libro2').value = conectado.alquileres 
-    // document.querySelector('.libro3').value = conectado.alquileres 
-    // document.querySelector('.libro4').value = conectado.alquileres 
-    // document.querySelector('.libro5').value = conectado.alquileres   
+//     document.querySelector(`'.libro[${i}]'`).innerHTML= conectado.alquileres[i].imagen;
+  
+// }}
 }
 
 

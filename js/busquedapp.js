@@ -65,7 +65,7 @@ function infoLibro(id){
   document.querySelector("#editLibro").innerText = libro.editorial;
   document.querySelector("#descLibro").innerText = libro.contraportada;
   document.querySelector("#categLibro").innerText = libro.categoria;
-  document.querySelector("#alquilar").onclick = function (){ alquilar(libro);}
+  document.querySelector("#alquilarLib").onclick = function (){ alquilar(libro);}
   document.querySelector("#modifBtn").onclick = function (){ irModif(libro);}
   document.querySelector("#elimBtn").onclick = function (){ borrarLibro(id);}
   $("#modalLibro").modal("show");
@@ -118,12 +118,16 @@ function alquilar(libro) {
   localStorage.setItem("usuarios", JSON.stringify(usuarioss));
   localStorage.setItem("conectado", JSON.stringify(conectado));
     
-}}
+}else{
+  swal(
+    "Ups! Debes estar suscripto para poder alquilar",
+    "Encuentra el boton de suscripción en la barra de navegación",
+    "error"
+  );
+}
+}
 
-const cerrarSesion = function () {
-  localStorage.removeItem('conectado');
-  location.replace("/html/home.html");
-};
+
 
 
 
@@ -203,7 +207,9 @@ function borrarLibro(id) {
 
 
 
-
+const cerrarModal=function(){
+  $("#modalModif").modal("hide");
+}
 
 const cerrarSesion = function () {
   localStorage.removeItem('conectado');
@@ -213,22 +219,31 @@ const cerrarSesion = function () {
 function revisarSesion() {
   document.querySelector("#perfilBtn").style.visibility = "hidden";
   document.querySelector(".soloAdmin").style.visibility = "hidden"
+  document.querySelector(".soloUsuario").style.visibility = "hidden"
+  document.querySelector("#modifBtn").style.visibility = "hidden"
+  document.querySelector("#elimBtn").style.visibility = "hidden"
+  document.querySelector("#alquilarLib").style.visibility = "hidden"
 
   if (conectado) {
+
           let nombre=conectado.nombre+" "
           let espacio = nombre.indexOf(" ");
            
           nombre =nombre.slice(0,espacio);
           
           
-      
-  
+          document.querySelector("#alquilarLib").style.visibility = "visible"
+          document.querySelector(".soloUsuario").style.visibility = "visible"
     document.querySelector("#sesBoton").style.visibility = "hidden";
     document.querySelector("#perfilBtn").style.visibility = "visible";
     document.querySelector("#perfilBtn").innerText =nombre;
     if (conectado.email === "adminbiblioteca@gmail.com") {
       document.querySelector(".soloAdmin").style.visibility = "visible"
       document.querySelector(".soloUsuario").style.visibility = "hidden"
+      document.querySelector("#modifBtn").style.visibility = "visible"
+      document.querySelector("#elimBtn").style.visibility = "visible"
+      document.querySelector("#alquilarLib").style.visibility = "hidden"
+
     }
   } else {
     setTimeout(function () {
@@ -237,6 +252,34 @@ function revisarSesion() {
         "Registrate o inicia sesión para poder alquilar libros, votar o suscribirte",
         "info"
       );
-  }, 10000);
+  }, 8000);
 }
+}
+
+/*Funciones suscripcion*/
+
+
+function confirmarSuscripcion(){
+  conectado.suscripto=true;
+  let encontrado = usuarios.indexOf(conectado);
+usuarios.splice(encontrado, 1, conectado);
+localStorage.setItem("usuarios", JSON.stringify(usuarios));
+localStorage.setItem("conectado", JSON.stringify(conectado));
+  sendEmail(conectado.nombre, conectado.email)
+  
+}
+
+
+function sendEmail (nombre, email){
+  let parametros = {
+      receptor: nombre,
+      emailUsuario: email
+  };
+  emailjs.send('service_zqyq8pe', 'suscripcionTemplate', parametros)
+  .then(function(response) {
+     console.log('Suscripción EXITOSA!', response.status, response.text);
+  }, function(error) {
+     console.log('Falló la suscripción!', error);
+  });
+
 }

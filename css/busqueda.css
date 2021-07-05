@@ -17,8 +17,13 @@ root{
   background-repeat: repeat; 
   } 
    
+  #tipoBusqueda,#btnBusc{
+    background-color:rgb(49, 2, 30);
+    border: none;
+    color: whitesmoke;
+  }
   #mainBus{
-      margin-top: 2vh;
+      margin-top: 15vh !important;
   }
   .libro-img-bus { 
    
@@ -164,7 +169,7 @@ root{
 #modalModif{
     overflow: scroll;
 }
-#modifBtn, #alquilar{
+#modifBtn, #alquilarLib{
     
     font-weight: 600;
     color: rgba(128, 19, 54, 1) !important;
