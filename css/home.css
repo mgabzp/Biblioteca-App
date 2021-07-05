@@ -327,3 +327,39 @@ margin-right: 10px;
 .bi-envelope::before {
   margin-right: 17px;
 }
+/* Estilo Modal Info */
+
+#imgLibro{
+  width: 100%;
+  display: block;
+  object-fit: contain;
+}
+#susImg{
+  width: 100%;
+  height: 100%;
+}
+.modalInfo, #modalInfo, .modalModifi{
+  background-color: rgba(56, 4, 45, 0.986) !important;
+  color: whitesmoke;
+}
+#modalModif{
+  overflow: scroll;
+}
+#modifBtn, #alquilarLib{
+  
+  font-weight: 600;
+  color: rgba(128, 19, 54, 1) !important;
+  background-color:whitesmoke;
+}
+
+#elimBtn, #btnActualizar{
+  background-color: rgba(128, 19, 54, 1) !important;
+  color: whitesmoke;
+  font-weight: 600 !important;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#infoCerrar{
+  background-color: rgb(243, 17, 88) !important;
+}
+

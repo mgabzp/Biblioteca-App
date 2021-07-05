@@ -140,7 +140,199 @@
     </div>
   
     </main>
-  
+    <div
+ class="modal fade"
+ id="modalLibro"
+ tabindex="-1"
+ aria-labelledby="exampleModalLabel"
+ aria-hidden="true"
+>
+<div class="modal-dialog modal-xl" id="modalInfo">
+   <div class="modal-content" >
+     <div class="modal-header modalInfo">
+       <h5 class="modal-title modalInfo" id="titulo_modal">Modal title</h5>
+       <button
+         type="button"
+         class="close"
+         data-dismiss="modal"
+         aria-label="Close"
+       >
+         <span aria-hidden="true">&times;</span>
+       </button>
+     </div>
+     <div class="modal-body modalInfo">
+           <div class="card mb-3 modalInfo">
+         <div class="row no-gutters text-center">
+           <div class="col-10 col-md-8 text-center">
+             <img id="imgLibro" class="img-fluid " src="" alt="imagen" />
+           </div>
+           <div class="col-12 col-md-8">
+             <div class="card-body ">
+               <h5 class="card-title" id="tituloLibro"></h5>
+               <p class="card-text">
+                <strong>ID: </strong><span id="idLibro"></span>
+              </p>
+               <p class="card-text">
+                 <strong>Autor: </strong><span id="autorLibro"></span>
+               </p>
+               <p class="card-text">
+                 <strong>Editorial: </strong><span id="editLibro"></span>
+               </p>
+               <p class="card-text">
+                 <strong>Año: </strong><span id="anioLibro"></span>
+               </p>
+               <p class="card-text">
+                 <strong>Votos: </strong><span id="votosLibro"></span>
+               </p>
+               <p class="card-text">
+                 <strong>Categoría: </strong><span id="categLibro"></span>
+               </p>
+               <p class="card-text">
+                 <strong>Descripción: </strong><span id="descLibro"></span>
+               </p>
+               <div class="soloAdmin">
+                <button class="btn-info  btn-block soloAdmin" id="modifBtn">Modificar</button>
+                <button class="btn-danger  btn-block soloAdmin" id="elimBtn">Eliminar</button>
+              </div >
+              <div class="soloUsuario"><button class="btn-info btn-block soloUsuario" id="alquilarLib"">Alquilar</button></div>
+             </div>
+           </div>
+         </div>
+       </div>
+       <!-- fin card -->
+     </div>
+     <div class="modal-footer modalInfo">
+       <button
+         type="button"
+         class="btn btn-secondary"
+         data-dismiss="modal"
+       id="infoCerrar">
+         Cerrar
+       </button>
+     </div>
+   </div>
+ </div>
+</div>
+  <!-- 
+Modal modificar libro -->
+<div
+class="modal fade"
+id="modalModif"
+tabindex="-1"
+aria-labelledby="exampleModalLabel"
+aria-hidden="true"
+>
+
+<div class="modal-dialog modalModifi">
+  <div class="modal-content modalModifi">
+    <div class="modal-header modalModifi">
+      <h3 class="modal-title" >ID Libro: <span id="modifId"></span></h3>
+      <button
+        type="button"
+        class="close"
+        data-dismiss="modalModif"
+        aria-label="Close"
+        onclick="cerrarModal()"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body modalModifi">
+      <form onsubmit="actualizarLibro(event)">
+        <div class="form-group">
+          <label>Titulo</label>
+          <input
+            type="text"
+            class="form-control"
+            id="tituloModif"
+            name="titulo"
+            maxlength="150"
+            onchange="modifLibro(event)"
+          />
+        </div>
+        <div class="form-group">
+          <label>Autor</label>
+          <input
+            type="text"
+            class="form-control"
+            id="autorModif"
+            name="autor"
+            maxlength="150"
+            onchange="modifLibro(event)"
+          />
+        </div>
+        <div class="form-group">
+          <label>Editorial</label>
+          <input
+            type="text"
+            class="form-control"
+            id="editorialModif"
+            name="editorial"
+            maxlength="150"
+            onchange="modifLibro(event)"
+          />
+        </div>
+        <div class="form-group">
+          <label>Categoría</label>
+          <input
+            type="text"
+            class="form-control"
+            id="categoriaModif"
+            name="categoria"
+            maxlength="150"
+            onchange="modifLibro(event)"
+          />
+        </div>
+        <div class="form-group">
+          <label>Descripcion</label>
+          <input
+            type="text"
+            class="form-control"
+            id="descripcionModif"
+            name="contraportada"
+            onchange="modifLibro(event)"
+          />
+        <div class="form-group">
+          <label>Año</label>
+          <input
+            type="text"
+            class="form-control"
+            id="anioModif"
+            name="anio"
+            maxlength="5"
+            onchange="modifLibro(event)"
+          />
+        </div>
+        <div class="form-group">
+          <label>Imagen</label>
+          <input
+            type="text"
+            class="form-control"
+            id="imagenModif"
+            name="imagen"
+            onchange="modifLibro(event)"
+          />
+        </div>
+
+        <button class="btn btn-info btn-block " id="btnActualizar">Actualizar</button>
+      </form>
+    </div>
+    <div class="modal-footer modalModifi">
+     
+       <button
+         type="button"
+         class="btn btn-secondary"
+         data-dismiss="modal"
+       id="infoCerrar"
+       onclick="cerrarModal()">
+         Cerrar
+       </button>
+     
+    </div>
+  </div>
+</div>
+</div>
+
     <footer class="footer-wrap">
       <div class="container-fluid">
         <div class="row">
