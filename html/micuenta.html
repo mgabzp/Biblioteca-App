@@ -17,6 +17,15 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
     />
+    <!-- INICIO EMAIL JS MODAL SUSCRIPCION-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function() {
+    emailjs.init("user_s7HwAahidzc2rhmV4pspv");
+    })();
+    </script>
+    <!--FIN EMAIL JS MODAL SUSCRIPCION-->
+    <!-- <link rel="stylesheet" href="/css/modalSus.css"> -->
     <link rel="stylesheet" href="/css/micuenta.css" />
 
     <title>Biblioteca digital</title>
@@ -106,6 +115,7 @@ emailjs.init("user_s7HwAahidzc2rhmV4pspv");
           href="#"
           ><img id="logoNav" src="/img/biblioteca-01.png" alt="logo biblioteca"></a
         >
+       
       </nav>
     </header>
     <main id="micuentaMain">
@@ -136,7 +146,7 @@ emailjs.init("user_s7HwAahidzc2rhmV4pspv");
                 <div class="card-body divCuenta">
                   <div class="row gutters">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                      <h2 class="mb-3 mt-3">Mi cuenta</h2>
+                      <h2 class="tit-micuenta mb-3 mt-3">Mi cuenta</h2>
                     </div>
 
                   <!-- <form onsubmit="handleSubmit(event)"> -->
@@ -172,13 +182,14 @@ emailjs.init("user_s7HwAahidzc2rhmV4pspv");
                   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group-cuenta">
                       <label>Alquileres</label>
-                      <input
-                        type="text"
-                        class="form-control cuentaField"
-                        id="alquileres"
-                        name="alquileres"
-                        placeholder="libro 1, libro 2"
-                      />
+                      <select class="form-control cuentaField"
+                      class="btn" id="alquileres" name="alquileres" placeholder="Mis libros">
+                        <option class="dropdown-item" id="libro1" value="libro1" selected></option>
+                        <option class="dropdown-item" id="libro2" value="libro2"></option>
+                        <option class="dropdown-item" id="libro3" value="libro3"></option>
+                        <option class="dropdown-item" id="libro4" value="libro4"></option>
+                        <option class="dropdown-item" id="libro5" value="libro5"></option>
+                      </select>
                     </div>
                   </div>
                   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
@@ -206,7 +217,7 @@ emailjs.init("user_s7HwAahidzc2rhmV4pspv");
             <form id="form2" onsubmit="cambiarClave(event)">
               <div class="row gutters">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                  <h5 class="mt-3 mb-3">Cambiar contraseña</h5>
+                  <h5 class="tit-cambiarPass mt-3 mb-3">Cambiar contraseña</h5>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                   <div class="form-group-cuenta">
@@ -242,6 +253,66 @@ emailjs.init("user_s7HwAahidzc2rhmV4pspv");
 </div>
 </section>
 </main>
+<!--Comienzo de modal suscripción-->
+<!-- <div class="container" id="susContainer">
+<div
+class="modal fade"
+id="exampleModal"
+tabindex="-1"
+role="dialog"
+aria-labelledby="exampleModalLabel"
+aria-hidden="true"
+>
+<div class="modal-dialog-sus" role="document">
+  <div class="modal-content-sus">
+    <div class="modal-header-sus">
+      <button
+        type="button"
+        class="close"
+        data-dismiss="modal"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body-sus p-0 row">
+      <div class="col-12 col-lg-5 ad p-0">
+        <img
+          src="/img/modal-susc.jpg"
+          width="100%"
+          height="100%"
+        />
+      </div>
+      <div class="details-sus col-12 col-lg-7">
+        <h2 class="para-sus">QUÉDATE CONECTADO</h2>
+        <p>
+          <small class="para-sus"
+            >Suscríbete y accede al alquiler de hasta 5 libros totalmente gratuitos al mes!<br />
+             Además estarás al día con nuevos lanzamientos, concursos, noticias.etc.
+          </small>
+        </p>
+        <p>
+          <small class="para-sus"
+            >Nuestro mail es enviado cada semana, los días<br />Lunes</small
+          >
+        </p>
+        <button
+        type="button"
+        class="btn btn-success btn-sm mb-5"
+        data-toggle="modal"
+        data-target="#exampleModal"
+        onclick= "confirmarSuscripcion()"
+        >
+        Suscribirme
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div> -->
+<!--Fin de modal suscripción-->
+
           
 <footer class="footer-wrap">
   <div class="container-fluid">
@@ -284,8 +355,8 @@ emailjs.init("user_s7HwAahidzc2rhmV4pspv");
   </div>
 </footer>
 
-<script src="/js/suscripcion.js"></script>
 <script src="/js/micuenta.js"></script>
+<!-- <script src="/js/suscripcion.js"></script> -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

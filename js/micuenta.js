@@ -75,7 +75,13 @@ function vistaPerfil(){
     document.querySelector('#nombreCompleto').value = conectado.nombre
     document.querySelector('#email').value= conectado.email
     document.querySelector('#imagenPerfil').value= conectado.imagen
-    document.querySelector('#alquileres').value = conectado.alquileres  
+
+    
+    document.querySelector('.libro1').value = conectado.alquileres
+    document.querySelector('.libro2').value = conectado.alquileres 
+    document.querySelector('.libro3').value = conectado.alquileres 
+    document.querySelector('.libro4').value = conectado.alquileres 
+    document.querySelector('.libro5').value = conectado.alquileres   
 }
 
 

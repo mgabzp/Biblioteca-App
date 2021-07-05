@@ -1,7 +1,9 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+root{
+    --color1: #EE4540;
+    --color2: #C72C41;
+    --color3: #801336;
+    --color4: #510A32;
+    --color5: #2D142C;
 }
 
 
@@ -36,27 +38,40 @@
     background: transparent
 }
 
-.modal,
-.fade,
+#susBtn{
+  margin-top: 3vh;
+  margin-left: 1vw;
+  background-color: var(--color2);
+  border: 1px solid var(--color5);
+  transition-property: transform;
+  transition-duration: 0.5s;
+  
+}
+#susBtn:hover{
+  transform: scale(1.1);
+}
+
+.modal-sus,
+.fade-sus,
 .show {
     background-color: rgb(29, 27, 27);
     padding-left: 15px;
     padding-right: 15px
 }
 
-h2 {
+h2  .modalsus {
     font-weight: bold;
     margin-bottom: 15px;
     color: #000
 }
 
-.modal-content {
+.modal-content-sus {
     border: none;
     background: transparent;
     padding: 0 19px
 }
 
-.close {
+.close-sus {
     position: relative;
     top: 48px;
     left: 13px;
@@ -67,28 +82,28 @@ h2 {
     color: black
 }
 
-.modal-header {
+.modal-header-sus {
     border: none
 }
 
-.modal-header .close {
+.modal-header-sus .close-sus {
     padding: 0rem 1rem !important;
     margin: -1rem -1rem -1rem auto
 }
 
-.modal-body {
+.modal-body-sus {
     border: none;
     background-color: white;
     padding-bottom: 5px
 }
 
-.close.focus,
-.close:focus {
+.close-sus.focus,
+.close-sus:focus {
     outline: 0;
     box-shadow: none !important
 }
 
-.form-control {
+.form-control-sus {
     width: 80%;
     height: 50px;
     border: none;
@@ -99,7 +114,7 @@ h2 {
     font-size: 12px
 }
 
-.form-control.focus {
+.form-control-sus.focus {
     border: none;
     border-color: #fff;
     border-bottom: 1px solid #000;
@@ -108,21 +123,21 @@ h2 {
 }
 
 @media (min-width:599px) {
-    .modal-dialog {
+    .modal-dialog-sus {
         max-width: 47rem
     }
 
-    .details {
+    .details-sus {
         padding: 60px 0 40px 50px
     }
 
-    .text-muted a {
+    /* .text-muted a {
         color: #c0bfbf;
         font-weight: bold;
         text-decoration: underline
-    }
+    } */
 
-    small.para {
+    small.para-sus {
         font-weight: bold;
         font-size: 14px;
         color: #63686c
@@ -161,3 +176,245 @@ h2 {
     width: 18rem;
   }
 
+@import "compass";
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800,300italic,400italic,600italic,700italic,800italic);
+body {
+  /* background: linear-gradient(to right top, #ee4540, #c12c4e, #8e224e, #5b1d43, #2d142c); */
+  background-image: linear-gradient(to top, #2d142c, #33142e, #3a1330, #411131, #480f32, #581037, #68103b, #79113e, #971943, #b62446, #d33345, #ee4540);
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+
+
+
+/* .container {
+  width: 100%;
+  height: 100%;
+} */
+
+.libro-img {
+  width: 100%;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  z-index: 111 !important;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  position: relative;
+  object-fit: cover;
+  background-size: 100% 100%;
+
+
+}
+ .destacados{
+
+ text-align: center;
+ font-family: 'Montserrat', sans-serif;
+ color: #e7e7e7;
+
+ }
+
+.Libro {
+
+  background: linear-gradient(to right top, #ee4540, #c12c4e, #8e224e, #5b1d43, #2d142c);
+  position: relative;
+  background-size: contain;
+  background-size: cover;
+  z-index: 1 !important;
+  width: 375px;
+  height: 650px;
+  display:block;
+  border-radius: 4px;
+  /* margin-left: 90px; */
+  margin-top: 20px;
+  margin-bottom: 20px;
+    
+}
+/* .text-libro-cont {
+  padding: 0px 12px;
+  text-align: justify;
+}
+.action-btn {
+  text-align: right;
+}
+.action-btn i {
+  color: #fe4141;
+  font-size: 28px;
+  text-align: right;
+}
+.watch-btn {
+  display: block;
+  border: 1px solid #fe4141;
+  border-radius: 5px;
+  padding: 4px;
+  width: 140px;
+}
+.watch-btn h3 i {
+  font-size: 14px;
+  margin-right: 2px;
+  position: relative;
+  float: left;
+  line-height: 1;
+}
+.action-row {
+  margin-top: 24px;
+}
+/* .summary-row {
+  margin-top: 12px;
+}  */
+/* summary-row {
+  margin-top: 40px;
+} */
+
+
+/* TYPOGRAPHY STARTS */
+
+/* Fonts */
+h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+  color: #e7e7e7;
+  margin: 0px;
+}
+h1 {
+  font-size: 20px;
+  /* font-weight: 400; */
+}
+h3 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fe4141;
+}
+h5 {
+  font-size: 12px;
+  font-weight: 400;
+}
+.libro-gen, .libro-likes {
+  margin: 0px;
+  padding: 0px;
+}
+.libro-gen li, .libro-likes li {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  color: #818181;
+  width: auto;
+  display: block;
+  float: left;
+  margin-right: 6px;
+  font-weight: 600;
+}
+.libro-likes {
+  float: right;
+}
+.libro-likes li {
+  color: #fe4141;
+}
+.libro-likes li:last-child {
+  margin-right: 0px;
+}
+.libro-likes li i {
+  font-size: 14px;
+  margin-right: 4px;
+  position: relative;
+  float: left;
+  line-height: 1;
+}
+/* .libro-details {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: #b4b4b4;
+} */
+.libro-description {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #9b9b9b;
+  text-align: justify;
+  line-height: 1.3;
+}
+.libro-autor {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: #e7e7e7;
+  font-style: italic;
+}
+/* TYPOGRAPHY ENDS */
+/** GRID STARTS **/
+/* .thegrid {
+  margin: 0 auto;
+}
+.elements-distance, .libro-details, .libro-description, .libro-autor {
+  margin: 0px;
+} */
+.mr-grid {
+  width: 100%;
+}
+/* .mr-grid:before, .mr-grid:after {
+  content: "";
+  display: table; */
+/* }
+.mr-grid:after {
+  clear: both;
+} */
+.mr-grid {
+  *zoom: 1;
+}
+.col1{
+  margin: 0% 0.5% 0.5% 0.5%;
+  padding: 1%;
+  float: left;
+  display: block;
+}
+
+.col2 {
+  margin: 10% 0.5% 0.5% 0.5%;
+  padding: 1%;
+  float: left;
+  display: block;
+
+}
+/* Columns match, minus margin sum. E.G. margin-left+margin-right=1%, col2=50%-1% - added padding:1%*/
+.col1 {
+  width: 98%;
+}
+.col2 {
+  width: 47%;
+}
+/* .col3 {
+  width: 30.3333333333%;
+}
+.col4 {
+  width: 22%;
+}
+.col5 {
+  width: 17%;
+}
+.col6 {
+  width: 13.6666666667%;
+} */
+/* Columns match with their individual number. E.G. col3+col3rest=full width row */
+/* .col3rest {
+  width: 63.6666666667%;
+}
+.col4rest {
+  width: 72%;
+}
+.col5rest {
+  width: 77%;
+}
+.col6rest {
+  width: 80.3333333333%;
+}
+.dribbble-link {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  border-radius: 50px;
+} */
