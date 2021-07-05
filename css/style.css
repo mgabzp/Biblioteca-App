@@ -1,4 +1,5 @@
 :root{
+<<<<<<< HEAD
     --color1: #EE4540;
     --color2: #C72C41;
     --color3: #801336;
@@ -6,6 +7,16 @@
     --color5: #2D142C;
 }
 
+=======
+  --color1: #EE4540;
+  --color2: #C72C41;
+  --color3: #801336;
+  --color4: #510A32;
+  --color5: #2D142C;
+}
+
+/* background-image: linear-gradient(to right top, #ee4540, #c12c4e, #8e224e, #5b1d43, #2d142c); */
+>>>>>>> mauPC
 
 *{
     margin: 0;
@@ -13,169 +24,265 @@
     box-sizing: border-box;
 }
 
+/*------------------------ CARGAR STYLE ------------------------*/
+/* .cardB{
+    margin: 20px;
+}
 
 
-#contenedor{
   
- display: flex;
+  .card_avatar {
+    width: 18rem;
+  } */
 
-   
-   font-family: Helvetica, Arial, sans-serif;
-}
-.card {
-  width: 300px;
-  height: 300px;
-  margin-right: 10px;
-  margin-left: 100px;
- padding: 50px;
+.imgCardPreview {
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
 }
 
-#contenedor{
-    width: 100vw;
-    display: flex;
-    flex-wrap: wrap;
+.cardPreview{
+  height: 93%;
+  background-color: #510a327a;
+  border-radius: 10px;
 }
 
+<<<<<<< HEAD
 /*MODAL SUSCRIPCION CSS */
+=======
+.cardPreview-avatar{
+>>>>>>> mauPC
 
-.container {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-    background: transparent
+}
+ 
+.cardPreview-text{
+  color: black;
 }
 
-.modal,
-.fade,
-.show {
-    background-color: rgb(29, 27, 27);
-    padding-left: 15px;
-    padding-right: 15px
+.cargarBody{
+   background-image: linear-gradient(to right top, #ee4540, #d33541, #b8283f, #9c1c3c, #801336);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
 }
 #susImg{
     width: 100%;
 
 }
 
-h2 {
-    font-weight: bold;
-    margin-bottom: 15px;
-    color: #000
+.cargarForm{
+  height: 82%;
+  background-color: #510a327a;
+  border-radius: 10px;
 }
 
-.modal-content {
-    border: none;
-    background: transparent;
-    padding: 0 19px
+/*------------------------ CONTACTO STYLE ------------------------*/
+
+.contactBody{
+  background-image: url("https://trello-attachments.s3.amazonaws.com/60ce57f960265277870debba/960x710/309d508485ddef28cc49c4e0f00b1f40/still-life-690705_960_720.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
 }
 
-.close {
-    position: relative;
-    top: 48px;
-    left: 13px;
-    z-index: 1;
-    font-size: 30px;
-    font-weight: bold;
-    line-height: 1;
-    color: black
+.contactMain{
+  margin-top: 10vh;
 }
 
-.modal-header {
-    border: none
+.contact{
+  height: 50vh;
 }
 
-.modal-header .close {
-    padding: 0rem 1rem !important;
-    margin: -1rem -1rem -1rem auto
+.contactForm{
+  /* height: 50vh; */
+  background-color: #510a328a;
+  border-radius: 30px;
 }
 
-.modal-body {
-    border: none;
-    background-color: white;
-    padding-bottom: 5px
+.contactField{
+  background-color: rgba(255, 255, 255, 0.295);
+ border-radius: 18px;
+ color: whitesmoke !important;
 }
 
-.close.focus,
-.close:focus {
-    outline: 0;
-    box-shadow: none !important
+.contactField::placeholder{
+  font-size: 1.1rem;
+  color: white;
+  
 }
 
-.form-control {
-    width: 80%;
-    height: 50px;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 0px 0.5px 0px 0px #dae0e5 !important;
-    color: #63686c;
-    font-weight: bold;
-    font-size: 12px
+.contactField:hover{
+  background-color: rgba(255, 255, 255, 0.096);
+}
+.contactField:active{
+  background-color: rgba(255, 255, 255, 0.137);
+  color: ivory;
+}
+.contactField:focus-within{
+  background-color: rgba(255, 255, 255, 0.137);
 }
 
-.form-control.focus {
-    border: none;
-    border-color: #fff;
-    border-bottom: 1px solid #000;
-    outline: 0;
-    box-shadow: 0 0 0 0 rgba(0, 123, 255, .25)
+.btnContact{
+  background-color: var(--color3);
+  color: white;
+font-size: 1rem;
+border-radius: 25px;
+margin-top: 30px;
+transition-property: background-color;
+ transition-duration: 0.5s;
+ margin-bottom: 10px;
 }
 
-@media (min-width:599px) {
-    .modal-dialog {
-        max-width: 47rem
-    }
-
-    .details {
-        padding: 60px 0 40px 50px
-    }
-
-    .text-muted a {
-        color: #c0bfbf;
-        font-weight: bold;
-        text-decoration: underline
-    }
-
-    small.para {
-        font-weight: bold;
-        font-size: 14px;
-        color: #63686c
-    }
+.btnContact:hover{
+  background-color: rgb(167, 20, 103);
 }
 
-/*FIN MODAL SUSCRIPCION*/
+/*------------------------ NOSOTROS STYLE ------------------------*/
 
-/*Estilo mi cuenta*/
-.container{
-    display: inline-block !important; 
-}
-/*fin estilo mi cuenta*/
-
-.tarjeta{
-    margin: 10px;
-  height: max-content;
-   text-align: center;
-   
+#about-body{
+  background-color: white;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
 }
 
-#logonav{
-    position:absolute;
-    top: 5px;
-    right: 5px;
-}
-#imgLibro{
-    width: 20vw;
-    display: block;
-    object-fit: cover;
+#about-body span{
+  font-weight: bold;
 }
 
-.cardB{
-    margin: 20px;
+.about-section{
+  margin-top: 30px;
 }
 
-.img_card {
-    width: 100%;
+.img-about{
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.about-overlay{
+  display: block;
+  position: absolute;
+  font-family: 'Poiret One', sans-serif;
+  font-size: 70px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color:white;
+  z-index: 4;
+} 
+
+.about-hr{
+  height: 1px;
+  /* width: 30%; */
+  background-color: #ccc;
+  border: none;
+}
+
+.img-avatar{
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  border: 3px solid var(--color5);
+}
+
+.about-info h3{
+  color: var(--color5);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.wrapper{
+  height: 280px;
+  width: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+ perspective: 1000px;
+}
+.wrapper .card{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  background: #fff;
+  border-radius: 10px;
+  transform: translateY(0deg);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+  transition: transform 0.7s cubic-bezier(0.4,0.2,0.2,1);
+}
+.wrapper:hover > .front-face{
+  transform: rotateY(-180deg);
+}
+.wrapper .card img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.wrapper .back-face{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  transform: rotateY(180deg);
+}
+.wrapper:hover > .back-face{
+  transform: rotateY(0deg);
+}
+.wrapper .back-face img{
+  height: 80px;
+  width: 80px;
+  padding: 5px;
+  border-radius: 50%;
+  background: linear-gradient(to right top, #ee4540, #c12c4e, #8e224e, #5b1d43, #2d142c);
+}
+.wrapper .back-face .info{
+  text-align: center;
+}
+.back-face .info .title{
+  font-size: 20px;
+  font-weight: 500;
+}
+.back-face ul{
+  display: flex;
+}
+.back-face ul a{
+  display: block;
+  height: 40px;
+  width: 40px;
+  color: #fff;
+  text-align: center;
+  margin: 0 5px;
+  line-height: 38px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background: linear-gradient(to right top, #ee4540, #c12c4e, #8e224e, #5b1d43, #2d142c);
+  transition: all 0.5s ease;
+}
+.back-face ul a:hover{
+  color: var(--color5);
+  border-color: var(--color5);
+  background: linear-gradient(375deg, transparent, transparent);
+}
+
+.about-section{
+    margin-top: 30px;
   }
   
+<<<<<<< HEAD
   .card_avatar {
     width: 18rem;
   }
@@ -310,3 +417,5 @@ height: fit-content;
 
 }
 /* Fin estilo header */
+=======
+>>>>>>> mauPC

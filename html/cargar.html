@@ -13,10 +13,18 @@
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Cargar libro</title>
   </head>
+<<<<<<< HEAD
   <body>
     <header id="gaHeader">
       <nav class="navbar navbar-expand-md" id="gaNavbar">
         <div class="container" id="gacontenedor">
+=======
+  <body class="cargarBody">
+    <header>
+      <nav class="navbar navbar-expand-md navbar-light">
+        <div class="container">
+          
+>>>>>>> mauPC
           <button
             class="navbar-toggler justify-content-end"
             id="gaColBtn"
@@ -96,9 +104,10 @@
     <main>
       <h1>Carga de libro</h1>
     <!-- ********************Vista previa del libro******************** -->
+    <div class="container">
       <div class="row">
-        <div class="col-3">
-          <div class="card card_avatar">
+        <div class="col-md-3">
+          <div class="cardPreview">
             <div class="text-center">
               <img
                 class="img_card card-img-top mt-3"
@@ -107,72 +116,75 @@
               />
             </div>
             <div class="card-body">
-              <p class="card-text">
+              <p class="cardPreview-textt">
                 <strong>Titulo: </strong><span id="tituloCard"></span>
               </p>
-              <p class="card-text">
+              <p class="cardPreview-text">
                 <strong>Editorial: </strong><span id="editorialCard"></span>
               </p>
-              <p class="card-text">
+              <p class="cardPreview-text">
                 <strong>Categoria: </strong><span id="categoriaCard"></span>
               </p>
-              <p class="card-text">
+              <p class="cardPreview-text">
                 <strong>Año emision: </strong><span id="emisionCard"></span>
               </p>
-              <a onclick="vistaPrevia()" class="btn btn-outline-success btn-block">Vista previa</a>
+              <a onclick="vistaPrevia()" class="btn btn-block btnContact">Vista previa</a>
             </div>
           </div>
         </div>
     <!-- ********************Formulario de carga de libros******************** -->
-        <div class="col-8">
-          <form class="needs-validation" onsubmit="handleSubmit(event)" novalidate>
-            <div class="form-group">
-              <label>Titulo</label>
-              <input type="text" class="form-control" id="tituloCarga" name="titulo" onchange="handleChange(event)" required>
-            </div>
-            <div class="form-group">
-              <label>Autor</label>
-              <input type="text" class="form-control" id="autorCarga" name="autor" onchange="handleChange(event)" required>
-            </div>
-              <div class="row">
-                <div class="col-6">
-                  <span>Categoria</span>
-                  <select class="form-group form-control mt-2" name="categoria" id="categoriaCarga" onchange="handleChange(event)">
-                    <option value="Ficcion" selected>Ficcion</option>
-                    <option value="Fantasia">Fantasia</option>
-                    <option value="Autoayuda">Autoayuda</option>
-                    <option value="Otro">Otra Categoria</option>
-                  </select>
-                </div>
-                <div class="col-6">
-                  <label>Otra Categoria</label>
-                  <input type="text" class="form-control" id="otraCategoria">  
-                 </div>
-              </div>         
-             <div class="row">
-                <div class="form-group col-8">
-                    <label>Editorial</label>
-                    <input type="text" class="form-control" id="editorialCarga" name="editorial" onchange="handleChange(event)" required> 
-                </div>
-                <div class="form-group col-4">
-                    <label>Año de emision</label>
-                    <input type="number" min="1900" max="2099" step="1" value="2016" class="form-control" id="emisionCarga" name="emision" onchange="handleChange(event)">
-                </div>                        
-            </div>
-            <div class="form-group">
-              <label>Imagen</label>
-              <input type="text" class="form-control" id="imagenCarga" name="imagen" onchange="handleChange(event)">
-            </div>
-            <div class="form-group">
-              <label>Contraportada</label>
-              <input type="text" class="form-control" id="contraportadaCarga" name="contraportada" onchange="handleChange(event)" required>
-            </div>
-      
-            <button class="btn btn-primary">Cargar</button>
-          </form>
+        <div class="col-md-8 offset-md-1 cargarForm">
+            <form class="needs-validation mt-3" onsubmit="handleSubmit(event)" novalidate>
+              <div class="form-group">
+                <label>Titulo</label>
+                <input type="text" class="form-control contactField" id="tituloCarga" name="titulo" onchange="handleChange(event)" required>
+              </div>
+              <div class="form-group">
+                <label>Autor</label>
+                <input type="text" class="form-control contactField" id="autorCarga" name="autor" onchange="handleChange(event)" required>
+              </div>
+                <div class="row">
+                  <div class="col-6">
+                    <span>Categoria</span>
+                    <div class="box">
+                      <select class="form-group form-control contactField mt-2" name="categoria" id="categoriaCarga" onchange="handleChange(event)">
+                        <option value="Ficcion" selected>Ficcion</option>
+                        <option value="Fantasia">Fantasia</option>
+                        <option value="Autoayuda">Autoayuda</option>
+                        <option value="Otro">Otra Categoria</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <label>Otra Categoria</label>
+                    <input type="text" class="form-control contactField" id="otraCategoria">  
+                   </div>
+                </div>         
+               <div class="row">
+                  <div class="form-group col-8">
+                      <label>Editorial</label>
+                      <input type="text" class="form-control contactField" id="editorialCarga" name="editorial" onchange="handleChange(event)" required> 
+                  </div>
+                  <div class="form-group col-4">
+                      <label>Año de emision</label>
+                      <input type="number" min="1900" max="2099" step="1" value="2016" class="form-control contactField" id="emisionCarga" name="emision" onchange="handleChange(event)">
+                  </div>                        
+              </div>
+              <div class="form-group">
+                <label>Imagen</label>
+                <input type="text" class="form-control contactField" id="imagenCarga" name="imagen" onchange="handleChange(event)">
+              </div>
+              <div class="form-group">
+                <label>Contraportada</label>
+                <input type="text" class="form-control contactField" id="contraportadaCarga" name="contraportada" onchange="handleChange(event)" required>
+              </div>
+        
+              <button class="btn btn-block btnContact">Cargar</button>
+            </form>
 
         </div>
       </div>
+    </div>
 
 
     </main>
