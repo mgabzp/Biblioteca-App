@@ -1,5 +1,5 @@
 //Cargo la clave Libros del Storage con el array Libros
-// let Libros = [];
+//let Libros = [];
 // localStorage.setItem("Libros", JSON.stringify(Libros));
 
 
@@ -75,35 +75,35 @@ function cargarCards(categoria)
         return libro1.titulo === libro
       })
       let card = document.createElement('div')
-      card.classList.add("Libro", "col-md-4")
+      card.classList.add("Libro-home", "col-md-4")
       card.innerHTML =`
       
-            <div class="libro-img" style="background-image: url(${elemento.Imagen});"></div>
-              <div class="text-libro-cont">
-                <div class="mr-grid">
-                  <div class="col1">
-                    <h1>${elemento.titulo}</h1>
-                    <ul class="libro-gen">
+            <div class="libro-img-home" style="background-image: url(${elemento.Imagen});"></div>
+              <div class="text-libro-cont-home">
+                <div class="mr-grid-home">
+                  <div class="col1-home">
+                    <h1 class="h1Ro">${elemento.titulo}</h1>
+                    <ul class="libro-gen-home">
                       <li>Autor: ${elemento.autor} /</li>
                       <li>Categoría: ${elemento.categoria}</li>
                     </ul>
                 </div>
               </div>
-              <div class="mr-grid summary-row">
-                <div class="col2">
-                  <h5>Descripción:</h5>
+              <div class="mr-grid-home summary-row-home">
+                <div class="col2-home">
+                  <h5 class="h5Ro">Descripción:</h5>
                 </div>
-                <div class="col2">
-                  <ul class="libro-likes">
-                    <li><i class="material-icons"></i>${elemento.votos}</li>
-                    <li><i class="material-icons fas fa-thumbs-up fa-1x" style="outline:none; cursor:pointer;" onclick="votar(${idLibro})"></i></li>
-                    <li><i class="material-icons fas fa-info fa-1x" style="outline:none; cursor:pointer;" onclick="votar(${idLibro})"></i></li>
+                <div class="col2-home">
+                  <ul class="libro-likes-home">
+                    <li><i></i>${elemento.votos}</li>
+                    <li><i class="fas fa-thumbs-up fa-1x" style="outline:none; cursor:pointer;" onclick="votar(${idLibro})"></i></li>
+                    <li><i class="fas fa-info fa-1x" style="outline:none; cursor:pointer;" onclick="votar(${idLibro})"></i></li>
                   </ul>
                 </div>
               </div>
-              <div class="mr-grid">
-                <div class="col1">
-                  <p class="libro-description">${elemento.contraportada}</p>
+              <div class="mr-grid-home">
+                <div class="col1-home">
+                  <p class="libro-description-home">${elemento.contraportada}</p>
                 </div>
               </div>
             </div>` 

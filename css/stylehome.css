@@ -25,7 +25,7 @@ body {
   height: 100%;
 } */
 
-.libro-img {
+.libro-img-home {
   width: 100%;
   height: 300px;
   background-position: center;
@@ -40,15 +40,16 @@ body {
 
 
 }
- .destacados{
+ .destacados-home{
 
  text-align: center;
  font-family: 'Montserrat', sans-serif;
  color: #e7e7e7;
 
+
  }
 
-.Libro {
+.Libro-home {
 
   background: linear-gradient(to right top, #ee4540, #c12c4e, #8e224e, #5b1d43, #2d142c);
   position: relative;
@@ -64,7 +65,7 @@ body {
   margin-bottom: 20px;
     
 }
-/* .text-libro-cont {
+/* .text-libro-cont-home {
   padding: 0px 12px;
   text-align: justify;
 }
@@ -93,10 +94,10 @@ body {
 .action-row {
   margin-top: 24px;
 }
-/* .summary-row {
+/* .summary-row-home {
   margin-top: 12px;
 }  */
-/* summary-row {
+/* summary-row-home {
   margin-top: 40px;
 } */
 
@@ -104,29 +105,40 @@ body {
 /* TYPOGRAPHY STARTS */
 
 /* Fonts */
-h1, h2, h3, h4, h5 {
+.h1Ro {
   font-family: 'Montserrat', sans-serif;
   color: #e7e7e7;
   margin: 0px;
+  font-size: 20px;
 }
-h1 {
+
+.h5Ro {
+  font-family: 'Montserrat', sans-serif;
+  color: #e7e7e7;
+  margin: 0px;
+  font-size: 12px;
+  font-weight: 400;
+
+}
+/* h1 {
   font-size: 20px;
   /* font-weight: 400; */
-}
-h3 {
+/* } */
+/* h3 {
   font-size: 14px;
   font-weight: 400;
   color: #fe4141;
-}
-h5 {
+} */
+/* h5 {
   font-size: 12px;
   font-weight: 400;
-}
-.libro-gen, .libro-likes {
+} */ 
+
+.libro-gen-home, .libro-likes-home {
   margin: 0px;
   padding: 0px;
 }
-.libro-gen li, .libro-likes li {
+.libro-gen-home li, .libro-likes-home li {
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   color: #818181;
@@ -136,16 +148,16 @@ h5 {
   margin-right: 6px;
   font-weight: 600;
 }
-.libro-likes {
+.libro-likes-home {
   float: right;
 }
-.libro-likes li {
+.libro-likes-home li {
   color: #fe4141;
 }
-.libro-likes li:last-child {
+.libro-likes-home li:last-child {
   margin-right: 0px;
 }
-.libro-likes li i {
+.libro-likes-home li i {
   font-size: 14px;
   margin-right: 4px;
   position: relative;
@@ -158,7 +170,7 @@ h5 {
   font-weight: 300;
   color: #b4b4b4;
 } */
-.libro-description {
+.libro-description-home {
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   font-weight: 400;
@@ -166,13 +178,13 @@ h5 {
   text-align: justify;
   line-height: 1.3;
 }
-.libro-autor {
+/* .libro-autor {
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   font-weight: 300;
   color: #e7e7e7;
-  font-style: italic;
-}
+  font-style: italic; */
+
 /* TYPOGRAPHY ENDS */
 /** GRID STARTS **/
 /* .thegrid {
@@ -181,7 +193,7 @@ h5 {
 .elements-distance, .libro-details, .libro-description, .libro-autor {
   margin: 0px;
 } */
-.mr-grid {
+.mr-grid-home {
   width: 100%;
 }
 /* .mr-grid:before, .mr-grid:after {
@@ -191,17 +203,17 @@ h5 {
 .mr-grid:after {
   clear: both;
 } */
-.mr-grid {
+.mr-grid-home {
   *zoom: 1;
 }
-.col1{
+.col1-home {
   margin: 0% 0.5% 0.5% 0.5%;
   padding: 1%;
   float: left;
   display: block;
 }
 
-.col2 {
+.col2-home {
   margin: 10% 0.5% 0.5% 0.5%;
   padding: 1%;
   float: left;
@@ -209,10 +221,10 @@ h5 {
 
 }
 /* Columns match, minus margin sum. E.G. margin-left+margin-right=1%, col2=50%-1% - added padding:1%*/
-.col1 {
+.col1-home {
   width: 98%;
 }
-.col2 {
+.col2-home {
   width: 47%;
 }
 /* .col3 {
