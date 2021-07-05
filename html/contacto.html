@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
 
   </head>
-  <body>
+  <body class="contactBody">
       <header>
         <nav class="navbar navbar-expand-md navbar-light">
             <div class="container">
@@ -42,34 +43,31 @@
               </div>
               </nav>
       </header>
-      <main>
-
+      <main class="contactMain">
     <!-- ********************TEXTO O IMAGEN DE CONTACTANOS******************** -->
-<div class="container">
+  <div class="container">
     <div class="row">
-        <div class="col-6">
-         <h5 class="justify-content-end">Contacto</h5>
-         <p>Algun texto</p>
-         <p>Nuestro mail</p>
-         <p>Nuestro telefono</p>
+        <div class="col-md-5 d-flex align-items-center justify-content-center contact">
+         <img src="/img/logo-w.png" style="height: 80%" alt="">
         </div>
     <!-- ********************FORMULARIO PARA ENVIAR CONSULTA******************** -->
-        <div class="col-6">
-          <form class="needs-validation" onsubmit="handleSubmit(event)" novalidate>
+        <div class="col-md-6 contactForm">
+          <h5 class="text-center mt-3">CONTACTANOS</h5>
+          <form class="needs-validation mt-3" onsubmit="handleSubmit(event)" novalidate>
             <div class="form-group">
-              <input type="text" class="form-control" id="nombreConsulta" name="titulo" onchange="handleChange(event)" placeholder="Nombre" required>
+              <input type="text" class="form-control contactField" id="nombreConsulta" name="nombre"  placeholder="Nombre" required>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" id="apellidoConsulta" name="autor" onchange="handleChange(event)" placeholder="Apellido" required>
+              <input type="text" class="form-control contactField" id="apellidoConsulta" name="apellido" placeholder="Apellido" required>
             </div>
             <div class="form-group">
-              <input type="email" class="form-control" id="imagenCarga" name="imagen" onchange="handleChange(event)" placeholder="Ingrese un email valido">
+              <input type="email" class="form-control contactField" id="imagenCarga" name="email" placeholder="Ingrese un email valido">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" id="contraportadaCarga" name="contraportada" onchange="handleChange(event)" required placeholder="Su consulta">
+              <textarea class="form-control contactField" id="contraportadaCarga" rows="3" name="consulta" required placeholder="Su consulta"></textarea>
             </div>
       
-            <button class="btn btn-primary">Enviar</button>
+            <button class="btn btn-block btnContact">Enviar</button>
           </form>
         </div>
     </div>
@@ -83,5 +81,6 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/823835b326.js"></script>
   </body>
 </html>

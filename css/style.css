@@ -15,23 +15,116 @@
     -webkit-box-sizing: border-box;
 }
 
-/*------------------------ Cargar Style ------------------------*/
+/*------------------------ CARGAR STYLE ------------------------*/
 /* .cardB{
     margin: 20px;
 }
 
-.img_card {
-    width: 100%;
-  }
+
   
   .card_avatar {
     width: 18rem;
   } */
 
-/*------------------------ Contacto Style ------------------------*/
+.imgCardPreview {
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+}
 
+.cardPreview{
+  height: 93%;
+  background-color: #510a327a;
+  border-radius: 10px;
+}
 
-/*------------------------ Nosotros Style ------------------------*/
+.cardPreview-avatar{
+
+}
+ 
+.cardPreview-text{
+  color: black;
+}
+
+.cargarBody{
+   background-image: linear-gradient(to right top, #ee4540, #d33541, #b8283f, #9c1c3c, #801336);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.cargarForm{
+  height: 82%;
+  background-color: #510a327a;
+  border-radius: 10px;
+}
+
+/*------------------------ CONTACTO STYLE ------------------------*/
+
+.contactBody{
+  background-image: url("https://trello-attachments.s3.amazonaws.com/60ce57f960265277870debba/960x710/309d508485ddef28cc49c4e0f00b1f40/still-life-690705_960_720.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.contactMain{
+  margin-top: 10vh;
+}
+
+.contact{
+  height: 50vh;
+}
+
+.contactForm{
+  /* height: 50vh; */
+  background-color: #510a327a;
+  border-radius: 30px;
+}
+
+.contactField{
+  background-color: rgba(255, 255, 255, 0.295);
+ border-radius: 18px;
+ color: whitesmoke !important;
+}
+
+.contactField::placeholder{
+  font-size: 1.1rem;
+  color: white;
+  
+}
+
+.contactField:hover{
+  background-color: rgba(255, 255, 255, 0.096);
+}
+.contactField:active{
+  background-color: rgba(255, 255, 255, 0.137);
+  color: ivory;
+}
+.contactField:focus-within{
+  background-color: rgba(255, 255, 255, 0.137);
+}
+
+.btnContact{
+  background-color: var(--color3);
+  color: white;
+font-size: 1rem;
+border-radius: 25px;
+margin-top: 30px;
+transition-property: background-color;
+ transition-duration: 0.5s;
+ margin-bottom: 10px;
+}
+
+.btnContact:hover{
+  background-color: rgb(167, 20, 103);
+}
+
+/*------------------------ NOSOTROS STYLE ------------------------*/
 
 #about-body{
   background-color: white;
