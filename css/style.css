@@ -111,7 +111,9 @@ transition-property: background-color;
   color: black;
   font-family: 'Montserrat', sans-serif;
 }
-
+.footerNos{
+  margin-top: 10vh;
+}
 #nosotrosMain{
   margin-top: 15vh !important;
 }
