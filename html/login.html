@@ -14,7 +14,12 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/css/login.css" />
-
+    <link
+    rel="stylesheet"
+    href="/css/screen768.css"
+    media="screen and (min-width:768px)"
+  />
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Login</title>
   </head>
   <body id="loginBody">
@@ -33,69 +38,67 @@
             aria-label="Toggle navigation"
           >
           <img id="logoNav" src="/img/biblioteca-01.png" alt="logo biblioteca"></button>
-          <div
-            class="collapse navbar-collapse justify-content-start gaNavCol"
-            id="navbarNav"
-          >
-            <ul class="navbar-nav" id="gaLista">
-              <li class="nav-item gaItem">
-                <a class="nav-link" id="sesBoton" href="/html/login.html"
-                  ><i class="fa fa-user fa-2x" aria-hidden="true"
-                    ></i
-                  ></a
-                >
-              </li>
-              <li class="nav-item gaItem" id="usuarioBoton">
-                <a
-                  class="nav-link"
-                  href="/html/micuenta.html"
-                  id="perfLink"
-                ></a>
-              </li>
-              <li class="nav-item gaItem" id="cerrarBoton">
+          <div class="col-12">
+            <div
+              class="collapse navbar-collapse justify-content-start gaNavCol"
+              id="navbarNav"
+            >
+              <ul class="navbar-nav" id="gaLista">
+                <li class="nav-item gaItem">
+                  <a class="nav-link" id="sesBoton" href="/html/login.html"
+                    ><i class="fa fa-user fa-2x" aria-hidden="true"
+                      ></i
+                    ></a
+                  >
+                </li>
+                <li class="nav-item" >
+                  <div class="btn-group dropdown" id="btnSes">
+                    <button class="btn btn-md dropdown-toggle "  type="button" data-toggle="dropdown" aria-haspopup="true" id="perfilBtn" aria-expanded="false">
+                      </button>
+                    <div class="dropdown-menu dropdown-menu-sm-left"  id="perfilDd">
+                        <a class="dropdown-item " href="/html/micuenta.html">Mi cuenta</a>
+                        <div class="dropdown-divider perfilDd"></div>
+                        <a class="dropdown-item " id="cerrarLink" onclick="cerrarSesion()" href="#">Cerrar sesión</a>
+                      </div>
+                  </div>
+                             </li>
+                
+                <li class="nav-item activado gaItem">
+                  <a class="nav-link" href="#"
+                    >Inicio <span class="sr-only">(current)</span></a
+                  >
+                </li>
+                <li class="nav-item gaItem">
+                  <a class="nav-link" href="/html/busqueda.html">Búsqueda</a>
+                </li>
+                
+                <li class="nav-item gaItem">
+                  <a class="nav-link" href="/html/nosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item gaItem">
+                  <a class="nav-link" href="/html/contacto.html">Contacto</a>
+                </li>
+                <li class="nav-item gaItem soloAdmin">
+                  <a class="nav-link soloAdmin"  href="#">Cargar</a>
+                </li>
                 <button
-                  class="btn-danger"
-                  id="cerrarLink"
-                  onclick="cerrarSesion()"
+                  type="button"
+                  class="btn btn-success btn-sm mb-5 soloUsuario"
+                  data-toggle="modal"
+                  data-target="#exampleModal"
+                  id="susBtn"
                 >
-                  x
+                  Suscríbete
                 </button>
-              </li>
-              <li class="nav-item activado gaItem">
-                <a class="nav-link" href="#"
-                  >Inicio <span class="sr-only">(current)</span></a
-                >
-              </li>
-
-              <li class="nav-item gaItem">
-                <a class="nav-link" href="/html/busqueda.html">Búsqueda</a>
-              </li>
-              <li class="nav-item gaItem">
-                <a class="nav-link" href="#">Cargar</a>
-              </li>
-              <li class="nav-item gaItem">
-                <a class="nav-link" href="/html/nosotros.html">Nosotros</a>
-              </li>
-              <li class="nav-item gaItem">
-                <a class="nav-link" href="/html/contacto.html">Contacto</a>
-              </li>
-              <button
-                type="button"
-                class="btn btn-success btn-sm mb-5"
-                data-toggle="modal"
-                data-target="#exampleModal"
-                id="susBtn"
-              >
-                Subscríbete
-              </button>
-            </ul>
+              </ul>
+            </div>
           </div>
         </div>
         <a
           class="navbar-brand font-weight-bold justify-content-end d-none d-md-block"
           id="logonav"
           href="#"
-          ><img id="logoNav" src="/img/biblioteca-01.png" alt="logo biblioteca"></a
+          ><img id="logoNavG" src="/img/biblioteca-01.png" alt="logo biblioteca"></a
         >
       </nav>
     </header>
@@ -152,8 +155,8 @@
                 </div>
                 <div class="form-group d-md-flex">
                   
-                  <div class="w-50 justify-content-center">
-                    <a href="/html/error404.html" >Forgot Password</a>
+                  <div class="w-60 justify-content-center">
+                    <a href="/html/error404.html" >¿Olvidaste tu contraseña?</a>
                   </div>
                 </div>
               </form>
@@ -170,6 +173,7 @@
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
       crossorigin="anonymous"
     ></script>
+    <script src="https://use.fontawesome.com/823835b326.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"

@@ -10,20 +10,32 @@ const cerrarSesion = function () {
 };
 
 function revisarSesion() {
-  document.querySelector("#usuarioBoton").style.visibility = "hidden";
- document.querySelector("#cerrarBoton").style.visibility = "hidden";
+  document.querySelector("#perfilBtn").style.visibility = "hidden";
+  document.querySelector(".soloAdmin").style.visibility = "hidden"
 
-  if (!conectado) {
-    setTimeout(function () {
-      alert("Inicia sesión para poder alquilar un libro"); //!Alert más fachero
-    }, 10000);
-  } else {
+  if (conectado) {
+          let nombre=conectado.nombre+" "
+          let espacio = nombre.indexOf(" ");
+           
+          nombre =nombre.slice(0,espacio);
+          
+          
+      
+  
     document.querySelector("#sesBoton").style.visibility = "hidden";
-    document.querySelector("#usuarioBoton").style.visibility = "visible";
-    document.querySelector("#cerrarBoton").style.visibility = "visible";
-    document.querySelector("#perfLink").innerText = conectado.nombre;
+    document.querySelector("#perfilBtn").style.visibility = "visible";
+    document.querySelector("#perfilBtn").innerText =nombre;
     if (conectado.email === "adminbiblioteca@gmail.com") {
-      //!habilitar botones admin
+      document.querySelector(".soloAdmin").style.visibility = "visible"
+      document.querySelector(".soloUsuario").style.visibility = "hidden"
     }
-  }
+  } else {
+    setTimeout(function () {
+      swal(
+        "Hola Forastero!",
+        "Registrate o inicia sesión para poder alquilar libros, votar o suscribirte",
+        "info"
+      );
+  }, 10000);
+}
 }

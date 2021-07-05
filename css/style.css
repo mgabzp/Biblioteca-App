@@ -1,3 +1,12 @@
+:root{
+    --color1: #EE4540;
+    --color2: #C72C41;
+    --color3: #801336;
+    --color4: #510A32;
+    --color5: #2D142C;
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -27,7 +36,7 @@
     flex-wrap: wrap;
 }
 
-/*MODAL SUBSCRIPCION CSS */
+/*MODAL SUSCRIPCION CSS */
 
 .container {
     display: flex;
@@ -42,6 +51,10 @@
     background-color: rgb(29, 27, 27);
     padding-left: 15px;
     padding-right: 15px
+}
+#susImg{
+    width: 100%;
+
 }
 
 h2 {
@@ -167,3 +180,133 @@ h2 {
     width: 18rem;
   }
 
+
+  /* Estilo header */
+
+
+#gaHeader{
+    font-family: 'Roboto Mono', monospace;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: #2d142c9c;
+    transition: background-color 500ms, color 500ms;
+    
+}
+#gaNavbar{
+    height: 10vh;
+}
+#gaColBtn{
+    color: white;
+}
+.gaNavCol,
+#gaLista {
+    background-color: var(--color5) ;
+    text-align: center;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    
+     
+  }
+
+
+#gaHeader.colorear{
+background-color: var(--color4);
+
+}
+#gaLista{
+    margin-left: 3vw;
+    margin-top: 3vh;
+}
+#susBtn{
+    margin-top: 3vh;
+    margin-left: 1vw;
+    background-color: var(--color2);
+    border: 1px solid var(--color5);
+    transition-property: transform;
+    transition-duration: 0.5s;
+  
+    
+}
+#susBtn:hover{
+    transform: scale(1.1);
+}
+
+#gacontenedor{
+    margin: 0;
+    padding: 0;
+}
+
+
+#navbarNav{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 0;
+    height: 20vh;
+    background-color: transparent;
+    
+}
+
+.gaItem {
+    margin-top: 2vh;
+    margin-bottom: 0;
+    padding: 0;
+    height: fit-content;
+    transition-property: transform;
+    transition-duration: 0.5s;
+    
+}
+.gaItem:hover{
+    transform: scale(1.15);
+}
+#gaLista .gaItem a{
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    
+}
+.activado{
+    border-bottom: 2px solid var(--color2);
+
+    font-weight: bold;
+}
+#logoNav{
+   position: fixed;
+   top: 2vh;
+   right: 5vw;
+    height: 7vh;
+}
+#logoNavG{
+    position: fixed;
+    top: 2vh;
+    right: 5vw;
+     height: 8vh;
+ }
+
+ #perfilBtn, #perfilDd{
+    background-color: #5f1844f1;
+    color: white;
+    font-size: small;
+    font-weight: 550;
+    background-image: url(../);
+}
+#perfilDd > .dropdown-item:hover{
+    background-color: #ad367ff1;
+    border-radius: 20px;
+}
+#perfilDd a{
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+}
+#btnSes{
+padding: 0;
+margin-top: 2.2vh;
+margin-bottom: 0;
+padding: 0;
+height: fit-content;
+
+}
+/* Fin estilo header */

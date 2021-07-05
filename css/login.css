@@ -11,11 +11,12 @@
 }
 #regisBody{
     background-image: url("https://www.urdesignmag.com/wordpress/wp-content/uploads/2016/08/yangzhou-zhongshuge-library-xl-muse-1.jpg");
-    height: 700px;
+    height:100vh; 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
+  
 }
 #registroMain{
     padding-top: 5vh;
@@ -91,8 +92,9 @@ transition-property: font-size;
 }
 .divRegis{
     padding-top: 5px;
-    background-color: #510a32ad;
+    background-color: #510a32bb;
     border-radius: 30px;
+    font-weight: 600;
     
 }
 
@@ -110,18 +112,22 @@ transition-property: font-size;
     
 }
 #gaNavbar{
-    height: 10vh !important;
+    height: 10vh;
 }
 #gaColBtn{
     color: white;
+    
+    
+
 }
-.collapse  #gaNavCol,
+.gaNavCol,
 #gaLista {
-    background-color: #510a32bd ;
+    background-color: var(--color5) ;
     text-align: center;
     padding-right: 15px;
     padding-bottom: 15px;
-    width: 100vw;
+    
+     
   }
 
 
@@ -190,6 +196,16 @@ background-color: var(--color4);
    position: fixed;
    top: 2vh;
    right: 5vw;
-
-    height: 8vh;
+    height: 7vh;
 }
+#logonav, #logoNavG{
+    position: fixed;
+    top: 2vh;
+    right: 6vw;
+    margin-right: 2vw;
+     height: 8vh;
+ }
+ #perfilBtn,#perfilDd{
+     background-color: cornsilk;
+     color: var(--color5);
+ }

@@ -13,3 +13,9 @@
 #gaNavbar{
     height: 12vh !important;
 }
+.divRegis{
+    margin-top: 60px;
+    position: absolute;
+    top:15vh
+}
+

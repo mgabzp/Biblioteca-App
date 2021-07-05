@@ -23,16 +23,30 @@ let usuario = {
   
     if (socio) {
       if (usuario.contrasenia === socio.contrasenia) {
-        alert(`Bienvenido nuevamente ${socio.nombre}`);//!Embellecer este alert también!!
-  
+       
+        swal(
+          `Bienvenido nuevamente ${socio.nombre}`,
+          "Estamos felices de tenerte de vuelta en Bookshelf",
+          "success"
+        );
+
         localStorage.setItem('conectado', JSON.stringify(socio));
-  
+        setTimeout(function () {
         location.replace("/html/home.html");
+      }, 3000)
       } else {
-        alert("usuario o contraseña incorrectos");
+        swal(
+          "Ups! Algo salió mal...",
+          "Email o contraseña incorrectos, intenta nuevamente",
+          "error"
+        );
       }
     } else {
-      alert("usuario o contraseña incorrectos");
+      swal(
+        "Ups! Algo salió mal...",
+        "Email o contraseña incorrectos, intenta nuevamente",
+        "error"
+      );
     }
   
     
