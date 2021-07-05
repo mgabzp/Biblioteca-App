@@ -42,7 +42,7 @@ function cargarTabla(array) {
 
     let contenedor = document.querySelector("#contenedorBus");
     contenedor.appendChild(card);
-    console.log(card)
+    
   });
 }
 
@@ -78,8 +78,7 @@ function filterTabla() {
   let tipoBusqueda = document.querySelector('#tipoBusqueda').value
   let texto = document.querySelector("#textBuscar");
   let libroBuscado=[];
-  let libroBuscadoCat=[];
-  let libroBuscadoTit=[];
+  
 
   if(tipoBusqueda === "titulo"){
       libroBuscado=libros.filter(function(libro){

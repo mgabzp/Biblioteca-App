@@ -17,6 +17,9 @@ root{
   background-repeat: repeat; 
   } 
    
+  #mainBus{
+      margin-top: 2vh;
+  }
   .libro-img-bus { 
    
   margin-top: 30px; 
