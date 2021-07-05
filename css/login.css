@@ -116,6 +116,9 @@ transition-property: font-size;
 }
 #gaColBtn{
     color: white;
+    
+    
+
 }
 .gaNavCol,
 #gaLista {
@@ -195,10 +198,11 @@ background-color: var(--color4);
    right: 5vw;
     height: 7vh;
 }
-#logoNavG{
+#logonav, #logoNavG{
     position: fixed;
     top: 2vh;
-    right: 5vw;
+    right: 6vw;
+    margin-right: 2vw;
      height: 8vh;
  }
  #perfilBtn,#perfilDd{

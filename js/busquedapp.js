@@ -1,39 +1,16 @@
 let libros = JSON.parse(localStorage.getItem("libros")) || [];
 let conectado = JSON.parse(localStorage.getItem("conectado")) || null;
-let usuarios = JSON.parse(localStorage.getItem('usuarios'))||[];
-revisarSesion();
-// class Libro {
-//   constructor(
-//     id,
-//     categoria,
-//     titulo,
-//     imagen,
-//     contraportada,
-//     autor,
-//     editorial,
-//     anio,
-//     votos
-//   ) {
-//     this.id = id;
-//     this.categoria = categoria;
-//     this.titulo = titulo;
-//     this.imagen = imagen;
-//     this.contraportada = contraportada;
-//     this.autor = autor;
-//     this.editorial = editorial;
-//     this.anio = anio;
-//     this.votos=votos;
-//   }
-// }
-
+let usuarioss = JSON.parse(localStorage.getItem('usuarios'))||[];
+// revisarSesion();
+cargarTabla(libros);
 
 function cargarTabla(array) {
   array.forEach(function (elemento,index) {
     let card = document.createElement("div");
-
+    card.classList.add("card","cardB","tarjeta", "col-12", "col-md-3")
     card.innerHTML = `
  
-  <div class="card cardB tarjeta col-12 col-md-3">
+  
   <img src="${elemento.imagen}">
   <div class="card-body">
     <h5 class="card-title">${elemento.titulo}</h5>
@@ -45,24 +22,15 @@ function cargarTabla(array) {
       </div>
       <div class="card-footer">
       <button onclick="infoLibro(${index})" >Más info</button>
-      </div>
-     
-      
-</div>`;
+      </div>`;
 
-    let contenedor = document.querySelector("#contenedor");
+    let contenedor = document.querySelector("#contenedorBus");
     contenedor.appendChild(card);
+    console.log(card)
   });
 }
 
-// function filterTabla() {
-//   let texto = document.querySelector("#textBuscar");
-//   filtrados = libros.filter(function (libro) {
-//     return libro.titulo.toUpperCase().indexOf(texto.value.toUpperCase()) > -1;
-//   });
-//   limpiarTabla();
-//   cargarTabla(filtrados);
-// }
+
 
 
 
@@ -93,6 +61,9 @@ function infoLibro(id){
 function filterTabla() {
   let tipoBusqueda = document.querySelector('#tipoBusqueda').value
   let texto = document.querySelector("#textBuscar");
+  let libroBuscado=[];
+  let libroBuscadoCat=[];
+  let libroBuscadoTit=[];
 
   if(tipoBusqueda === "titulo"){
       libroBuscado=libros.filter(function(libro){
@@ -101,27 +72,25 @@ function filterTabla() {
       libroBuscado=libros.filter(function(libro){
           return libro.categoria.toUpperCase().indexOf(texto.value.toUpperCase())>-1  })
   }else{
-    libroBuscadoCat=libros.filter(function(libro){
-      return libro.categoria.toUpperCase().indexOf(texto.value.toUpperCase())>-1  })
-      libroBuscadoTit=libros.filter(function(libro){
-        return libro.titulo.toUpperCase().indexOf(texto.value.toUpperCase())>-1  }) 
-      limpiarTabla()
-      cargarTabla(libroBuscadoCat)
-      cargarTabla(libroBuscadoTit)
+    limpiarTabla()
+      cargarTabla(libros)
       return
   }
 
-  if(libroBuscado.length !== 0){
-      limpiarTabla()
-      cargarTabla(libroBuscado)
-  }else{
-      alert("No se encontraron coincidencias")
+  if(libroBuscado.length == 0){
+     swal(
+      "Oh no! El libro que buscas no está en nuestra colección",
+      "Por el momento no contamos con el libro que estás buscando",
+      "error"
+    );
   }
 }
 
 
+
+
 function limpiarTabla(){
-  document.querySelector('#contenedor').innerHTML=""
+  document.querySelector('#contenedorBus').innerHTML=""
 }
 
 
@@ -129,9 +98,9 @@ function alquilar(libro) {
   if (conectado.email !== 'adminbiblioteca@gmail.com'&& conectado.suscripto== true){
   conectado.alquileres.push(libro);
 
-  let encontrado = usuarios.indexOf(conectado);
-  usuarios.splice(encontrado, 1, conectado);
-  localStorage.setItem("usuarios", JSON.stringify(usuarios));
+  let encontrado = usuarioss.indexOf(conectado);
+  usuarioss.splice(encontrado, 1, conectado);
+  localStorage.setItem("usuarios", JSON.stringify(usuarioss));
   localStorage.setItem("conectado", JSON.stringify(conectado));
     
 }}
@@ -145,6 +114,9 @@ const cerrarSesion = function () {
 
 
 // ! Código para modificar y eliminar 
+
+
+
 
 
 function irModif(libro){
@@ -196,14 +168,16 @@ function modifLibro(e) {
 function borrarLibro(id) {
   
 
-  let validar = confirm(`Está seguro que quiere borrar el libro ${libro.titulo}`);
-
-  if (validar) {
+  let validar=confirm(`¿Estás seguro de que quieres eliminar ${libro.titulo}?`)
+      if (validar) {
     libros.splice(id, 1);
     localStorage.setItem("libros", JSON.stringify(libros));
     
-    alert(`Se eliminó el libro ${libro.titulo}`);
-    
+    swal(
+      "Eliminado!",
+      `Se eliminó el libro ${libro.titulo}`,
+      "success"
+    );
 
     $("#modalLibro").modal("hide");
     limpiarTabla();
@@ -215,23 +189,23 @@ function borrarLibro(id) {
 
 
 
-function revisarSesion() {
-  document.querySelector("#usuarioBoton").style.visibility = "hidden";
-  document.querySelector("#cerrarBoton").style.visibility = "hidden";
-  document.querySelector(".adminDiv").style.visibility = "hidden";
 
-  if (!conectado) {
-    setTimeout(function () {
-      alert("Inicia sesión para poder alquilar un libro"); //!Alert más fachero
-    }, 5000);
-  } else {
-    document.querySelector("#sesBoton").style.visibility = "hidden";
-    document.querySelector("#usuarioBoton").style.visibility = "visible";
-    document.querySelector("#cerrarBoton").style.visibility = "visible";
-    document.querySelector("#perfLink").innerText = conectado.nombre;
-    if (conectado.email === "adminbiblioteca@gmail.com") {
-      document.querySelector(".adminDiv").style.visibility = "visible";
-    }
-  }
-}
-cargarTabla(libros);
+// function revisarSesion() {
+//   document.querySelector("#usuarioBoton").style.visibility = "hidden";
+//   document.querySelector("#cerrarBoton").style.visibility = "hidden";
+//   document.querySelector(".adminDiv").style.visibility = "hidden";
+
+//   if (!conectado) {
+//     setTimeout(function () {
+//       alert("Inicia sesión para poder alquilar un libro"); //!Alert más fachero
+//     }, 5000);
+//   } else {
+//     document.querySelector("#sesBoton").style.visibility = "hidden";
+//     document.querySelector("#usuarioBoton").style.visibility = "visible";
+//     document.querySelector("#cerrarBoton").style.visibility = "visible";
+//     document.querySelector("#perfLink").innerText = conectado.nombre;
+//     if (conectado.email === "adminbiblioteca@gmail.com") {
+//       document.querySelector(".adminDiv").style.visibility = "visible";
+//     }
+//   }
+// }
