@@ -7,22 +7,38 @@ cargarTabla(libros);
 function cargarTabla(array) {
   array.forEach(function (elemento,index) {
     let card = document.createElement("div");
-    card.classList.add("card","cardB","tarjeta", "col-12", "col-md-3")
-    card.innerHTML = `
- 
-  
-  <img src="${elemento.imagen}">
-  <div class="card-body">
-    <h5 class="card-title">${elemento.titulo}</h5>
-    <div><small>Autor:${elemento.autor}</small></div>
-    <div><small>Categoría:${elemento.categoria}</small></div>
-    <div><small>Año:${elemento.anio}</small></div>
+    card.classList.add("libro-bus", "col-auto", "col-md-auto", "mx-4");
+    card.innerHTML =`
     
-      
-      </div>
-      <div class="card-footer">
-      <button onclick="infoLibro(${index})" >Más info</button>
-      </div>`;
+          <div class="libro-img-bus" style="background-image: url(${elemento.imagen});"></div>
+            <div class="text-libro-cont-bus">
+              <div class="mr-grid-bus">
+                <div class="col1-bus">
+                  <h1 class="h1bus text-center">${elemento.titulo}</h1>
+                  <ul class="libro-gen-bus">
+                    <li>Autor: ${elemento.autor} /</li>
+                    <li>Categoría: ${elemento.categoria}</li>
+                  </ul>
+              </div>
+            </div>
+            <div class="mr-grid-bus summary-row-bus">
+              <div class="col2-bus">
+                <h5 class="h5bus">Descripción:</h5>
+              </div>
+              <div class="col2-bus">
+                <ul class="libro-likes-bus">
+                  <li><i></i>${elemento.votos}</li>
+                  <li><i class="fas fa-thumbs-up fa-1x" style="outline:none; cursor:pointer;" onclick="votar(${index})"></i></li>
+                  <li><i class="fas fa-info fa-1x" style="outline:none; cursor:pointer;" onclick="infoLibro(${index})"></i></li>
+                </ul>
+              </div>
+            </div>
+            <div class="mr-grid-bus">
+              <div class="col1-bus">
+                <p class="libro-description-bus">${elemento.contraportada}</p>
+              </div>
+            </div>
+          </div>`
 
     let contenedor = document.querySelector("#contenedorBus");
     contenedor.appendChild(card);
@@ -120,7 +136,7 @@ const cerrarSesion = function () {
 
 
 function irModif(libro){
-
+  $("#modalLibro").modal("hide");
   document.querySelector("#modifId").innerText = libro.id;
   document.querySelector("#tituloModif").value = libro.titulo;
   
@@ -190,22 +206,38 @@ function borrarLibro(id) {
 
 
 
-// function revisarSesion() {
-//   document.querySelector("#usuarioBoton").style.visibility = "hidden";
-//   document.querySelector("#cerrarBoton").style.visibility = "hidden";
-//   document.querySelector(".adminDiv").style.visibility = "hidden";
+const cerrarSesion = function () {
+  localStorage.removeItem('conectado');
+  location.replace("/html/home.html");
+};
 
-//   if (!conectado) {
-//     setTimeout(function () {
-//       alert("Inicia sesión para poder alquilar un libro"); //!Alert más fachero
-//     }, 5000);
-//   } else {
-//     document.querySelector("#sesBoton").style.visibility = "hidden";
-//     document.querySelector("#usuarioBoton").style.visibility = "visible";
-//     document.querySelector("#cerrarBoton").style.visibility = "visible";
-//     document.querySelector("#perfLink").innerText = conectado.nombre;
-//     if (conectado.email === "adminbiblioteca@gmail.com") {
-//       document.querySelector(".adminDiv").style.visibility = "visible";
-//     }
-//   }
-// }
+function revisarSesion() {
+  document.querySelector("#perfilBtn").style.visibility = "hidden";
+  document.querySelector(".soloAdmin").style.visibility = "hidden"
+
+  if (conectado) {
+          let nombre=conectado.nombre+" "
+          let espacio = nombre.indexOf(" ");
+           
+          nombre =nombre.slice(0,espacio);
+          
+          
+      
+  
+    document.querySelector("#sesBoton").style.visibility = "hidden";
+    document.querySelector("#perfilBtn").style.visibility = "visible";
+    document.querySelector("#perfilBtn").innerText =nombre;
+    if (conectado.email === "adminbiblioteca@gmail.com") {
+      document.querySelector(".soloAdmin").style.visibility = "visible"
+      document.querySelector(".soloUsuario").style.visibility = "hidden"
+    }
+  } else {
+    setTimeout(function () {
+      swal(
+        "Hola Forastero!",
+        "Registrate o inicia sesión para poder alquilar libros, votar o suscribirte",
+        "info"
+      );
+  }, 10000);
+}
+}

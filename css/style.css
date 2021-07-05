@@ -52,6 +52,10 @@
     padding-left: 15px;
     padding-right: 15px
 }
+#susImg{
+    width: 100%;
+
+}
 
 h2 {
     font-weight: bold;
@@ -286,6 +290,7 @@ background-color: var(--color4);
     color: white;
     font-size: small;
     font-weight: 550;
+    background-image: url(../);
 }
 #perfilDd > .dropdown-item:hover{
     background-color: #ad367ff1;

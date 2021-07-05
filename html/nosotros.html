@@ -51,10 +51,10 @@
                   >
                 </li>
                 <li class="nav-item" >
-                  <div class="btn-group" id="btnSes">
-                    <button class="btn btn-md dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" id="perfilBtn" aria-expanded="false">
+                  <div class="btn-group dropdown" id="btnSes">
+                    <button class="btn btn-md dropdown-toggle "  type="button" data-toggle="dropdown" aria-haspopup="true" id="perfilBtn" aria-expanded="false">
                       </button>
-                    <div class="dropdown-menu " id="perfilDd">
+                    <div class="dropdown-menu dropdown-menu-sm-left"  id="perfilDd">
                         <a class="dropdown-item " href="/html/micuenta.html">Mi cuenta</a>
                         <div class="dropdown-divider perfilDd"></div>
                         <a class="dropdown-item " id="cerrarLink" onclick="cerrarSesion()" href="#">Cerrar sesión</a>
@@ -70,18 +70,19 @@
                 <li class="nav-item gaItem">
                   <a class="nav-link" href="/html/busqueda.html">Búsqueda</a>
                 </li>
-                <li class="nav-item gaItem">
-                  <a class="nav-link" href="#">Cargar</a>
-                </li>
+                
                 <li class="nav-item gaItem">
                   <a class="nav-link" href="/html/nosotros.html">Nosotros</a>
                 </li>
                 <li class="nav-item gaItem">
                   <a class="nav-link" href="/html/contacto.html">Contacto</a>
                 </li>
+                <li class="nav-item gaItem soloAdmin">
+                  <a class="nav-link soloAdmin"  href="#">Cargar</a>
+                </li>
                 <button
                   type="button"
-                  class="btn btn-success btn-sm mb-5"
+                  class="btn btn-success btn-sm mb-5 soloUsuario"
                   data-toggle="modal"
                   data-target="#exampleModal"
                   id="susBtn"

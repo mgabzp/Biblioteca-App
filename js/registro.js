@@ -1,7 +1,7 @@
 
 let usuarios = JSON.parse(localStorage.getItem('usuarios'))||[];
 let conectado = JSON.parse(localStorage.getItem("conectado")) || null;
-revisarSesion();
+
 class Usuario{
   constructor(id,nombre,email,contrasenia,imagen,suscripto,alquileres){
     this.id=id;
@@ -62,22 +62,6 @@ const envioForm=function(e){
   
 
 
-function revisarSesion() {
-  document.querySelector("#usuarioBoton").style.visibility = "hidden";
-  document.querySelector("#cerrarBoton").style.visibility = "hidden";
-  
-
-  if (conectado) {
-    
-    document.querySelector("#sesBoton").style.visibility = "hidden";
-    document.querySelector("#usuarioBoton").style.visibility = "visible";
-    document.querySelector("#cerrarBoton").style.visibility = "visible";
-    document.querySelector("#perfLink").innerText = conectado.nombre;
-    if (conectado.email === "adminbiblioteca@gmail.com") {
-      document.querySelector(".adminDiv").style.visibility = "visible";
-    }
-  }
-}
 
 function enviarConfirmacion(nombre,email){
   let parametros = {

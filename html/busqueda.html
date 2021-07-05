@@ -9,12 +9,14 @@
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/busqueda.css">
     <link
     rel="stylesheet"
     href="/css/screen768.css"
     media="screen and (min-width:768px)"
   />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" /> 
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!--EMAIL JS-->
 
@@ -56,10 +58,10 @@
                   >
                 </li>
                 <li class="nav-item" >
-                  <div class="btn-group" id="btnSes">
-                    <button class="btn btn-md dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" id="perfilBtn" aria-expanded="false">
+                  <div class="btn-group dropdown" id="btnSes">
+                    <button class="btn btn-md dropdown-toggle "  type="button" data-toggle="dropdown" aria-haspopup="true" id="perfilBtn" aria-expanded="false">
                       </button>
-                    <div class="dropdown-menu " id="perfilDd">
+                    <div class="dropdown-menu dropdown-menu-sm-left"  id="perfilDd">
                         <a class="dropdown-item " href="/html/micuenta.html">Mi cuenta</a>
                         <div class="dropdown-divider perfilDd"></div>
                         <a class="dropdown-item " id="cerrarLink" onclick="cerrarSesion()" href="#">Cerrar sesión</a>
@@ -75,18 +77,19 @@
                 <li class="nav-item gaItem">
                   <a class="nav-link" href="/html/busqueda.html">Búsqueda</a>
                 </li>
-                <li class="nav-item gaItem">
-                  <a class="nav-link" href="#">Cargar</a>
-                </li>
+                
                 <li class="nav-item gaItem">
                   <a class="nav-link" href="/html/nosotros.html">Nosotros</a>
                 </li>
                 <li class="nav-item gaItem">
                   <a class="nav-link" href="/html/contacto.html">Contacto</a>
                 </li>
+                <li class="nav-item gaItem soloAdmin">
+                  <a class="nav-link soloAdmin"  href="#">Cargar</a>
+                </li>
                 <button
                   type="button"
-                  class="btn btn-success btn-sm mb-5"
+                  class="btn btn-success btn-sm mb-5 soloUsuario"
                   data-toggle="modal"
                   data-target="#exampleModal"
                   id="susBtn"
@@ -121,12 +124,12 @@
 
       </div>
       <br />
-      <div id="contenedorBus"></div>
+      <div id="contenedorBus" class="container-fluid"></div>
       
     </main>
  
 
-
+<!-- Modal Suscripción -->
 
        <div
        class="modal fade"
@@ -152,8 +155,7 @@
              <div class="col-12 col-lg-5 ad p-0">
                <img
                  src="https://image.freepik.com/foto-gratis/taza-cafe-angulo-alto-libros_23-2148882780.jpg"
-                 width="100%"
-                 height="100%"
+                 id="susImg"
                />
              </div>
              <div class="details col-12 col-lg-7">
@@ -194,10 +196,10 @@
  aria-labelledby="exampleModalLabel"
  aria-hidden="true"
 >
-<div class="modal-dialog modal-xl">
-   <div class="modal-content">
-     <div class="modal-header">
-       <h5 class="modal-title" id="titulo_modal">Modal title</h5>
+<div class="modal-dialog modal-xl" id="modalInfo">
+   <div class="modal-content" >
+     <div class="modal-header modalInfo">
+       <h5 class="modal-title modalInfo" id="titulo_modal">Modal title</h5>
        <button
          type="button"
          class="close"
@@ -207,11 +209,11 @@
          <span aria-hidden="true">&times;</span>
        </button>
      </div>
-     <div class="modal-body">
-           <div class="card mb-3">
-         <div class="row no-gutters">
-           <div class="col-10 col-md-4">
-             <img id="imgLibro" src="" alt="imagen" />
+     <div class="modal-body modalInfo">
+           <div class="card mb-3 modalInfo">
+         <div class="row no-gutters text-center">
+           <div class="col-10 col-md-8 text-center">
+             <img id="imgLibro" class="img-fluid " src="" alt="imagen" />
            </div>
            <div class="col-12 col-md-8">
              <div class="card-body ">
@@ -237,23 +239,23 @@
                <p class="card-text">
                  <strong>Descripción: </strong><span id="descLibro"></span>
                </p>
-               <div class="adminDiv">
-                <button class="btn-info" id="modifBtn">Modificar</button>
-                <button class="btn-danger"id="elimBtn">Eliminar</button>
-              </div>
-              <button class="btn-info" id="alquilar"">Alquilar</button>
+               <div class="soloAdmin">
+                <button class="btn-info  btn-block" id="modifBtn">Modificar</button>
+                <button class="btn-danger  btn-block" id="elimBtn">Eliminar</button>
+              </div >
+              <div class="soloUsuario"><button class="btn-info btn-block" id="alquilar"">Alquilar</button></div>
              </div>
            </div>
          </div>
        </div>
        <!-- fin card -->
      </div>
-     <div class="modal-footer">
+     <div class="modal-footer modalInfo">
        <button
          type="button"
          class="btn btn-secondary"
          data-dismiss="modal"
-       >
+       id="infoCerrar">
          Cerrar
        </button>
      </div>
@@ -270,10 +272,11 @@ Modal modificar libro -->
  aria-labelledby="exampleModalLabel"
  aria-hidden="true"
 >
- <div class="modal-dialog">
-   <div class="modal-content">
-     <div class="modal-header">
-       <h5 class="modal-title" id="modifId">Modal title</h5>
+
+ <div class="modal-dialog-lg modalModifi">
+   <div class="modal-content modalModifi">
+     <div class="modal-header modalModifi">
+       <h3 class="modal-title" >ID Libro: <span id="modifId"></span></h3>
        <button
          type="button"
          class="close"
@@ -283,7 +286,7 @@ Modal modificar libro -->
          <span aria-hidden="true">&times;</span>
        </button>
      </div>
-     <div class="modal-body">
+     <div class="modal-body modalModifi">
        <form onsubmit="actualizarLibro(event)">
          <div class="form-group">
            <label>Titulo</label>
@@ -360,10 +363,10 @@ Modal modificar libro -->
            />
          </div>
 
-         <button class="btn btn-outline-info btn-block">Actualizar</button>
+         <button class="btn btn-info btn-block " id="btnActualizar">Actualizar</button>
        </form>
      </div>
-     <div class="modal-footer">
+     <div class="modal-footer modalModifi">
       
      </div>
    </div>
