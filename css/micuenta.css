@@ -6,14 +6,6 @@
     --color5: #2D142C;
 }
 
-/* body {
-    margin: 0;
-    padding-top: 40px;
-    color: var(--color5);
-    background: #f5f6fa;
-    position: relative;
-    height: 100%;
-} */
 
 .config-micuenta .perfil-usuario {
     margin: 0 0 1rem 0;
@@ -29,10 +21,12 @@
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
     border-radius: 100px;
+    margin-top: 10px;
 }
 .config-micuenta .perfil-usuario h5.nombre-usuario {
     margin: 0 0 0.5rem 0;
-    color: var(--color5);
+    color: rgb(46, 19, 34);
+    /* border-color: wheat; */
 }
 .config-micuenta .perfil-usuario h2.email-usuario {
     margin: 0;
@@ -41,11 +35,11 @@
     color: var(--color5);
 }
 
-h2, h6 {
-    color: var(--color4) !important;
+h2, h5 {
+    color: rgba(255, 255, 255, 0.295) !important;
 }
 
-.form-control {
+/* .form-control {
     border: 2px solid #cfd1d8;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -53,9 +47,9 @@ h2, h6 {
     font-size: .825rem;
     background: #ffffff;
     color: #2e323c;
-}
+} */
 
-.btn {
+/* .btn {
     background-color: var(--color5) !important;
     color: whitesmoke;
     border: 2px solid #fff;
@@ -64,22 +58,331 @@ h2, h6 {
     text-decoration: none;
     transition: background-color 0.2s ease-out,
     color 0.2s ease-out;
-}
+} */
 
 
-.btn:hover,
+/* .btn:hover,
 .btn:active {
   background-color: #fff;
   color: var(--color1);
   transition: background-color 0.3s ease-in,
               color 0.3s ease-in;
-}
+} */
 
 .card {
-    background: #ffffff;
+    background: transparent;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
     border: 0;
     margin-bottom: 1rem;
 }
+
+/* Estilo registro Gaby */
+#micuentaMain{
+    padding-top: 10vh;
+}
+#micuentaBody{
+    background-image: linear-gradient(to top, #2d142c, #33142e, #3a1330, #411131, #480f32, #581037, #68103b, #79113e, #971943, #b62446, #d33345, #ee4540);
+    height: 100%;
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    color: white;
+    
+}
+#btnSubmit-miCuenta{
+background-color: var(--color3);
+font-size: 1rem;
+border-radius: 25px;
+margin-top: 30px;
+transition-property: background-color;
+ transition-duration: 0.5s;
+}
+#btnSubmit-miCuenta:hover{
+    background-color: rgb(46, 19, 34);
+}
+
+#btnSubmit-miCuenta2{
+    background-color: var(--color3);
+    font-size: 1rem;
+    border-radius: 25px;
+    margin-top: 30px;
+    transition-property: background-color;
+     transition-duration: 0.5s;
+}
+#btnSubmit-miCuenta2:hover{
+        background-color: rgb(46, 19, 34);
+}
+.cuentaField{
+    background-color: rgba(255, 255, 255, 0.295);
+   border-radius: 18px;
+   color: whitesmoke !important;
+  
+}
+
+.cuentaField:hover{
+    background-color: rgba(255, 255, 255, 0.096);
+}
+.cuentaField:active{
+    background-color: rgba(255, 255, 255, 0.137);
+    color: ivory;
+}
+.cuentaField:focus-within{
+    background-color: rgba(255, 255, 255, 0.137);
+}
+
+
+
+.cuentaField::placeholder{
+    font-size: 1.1rem;
+    color: white;
+    
+}
+
+.form-group-cuenta{
+    margin-bottom: 5px;
+}
+.form-group-cuenta a{
+text-decoration: none;
+color: rgb(245, 196, 196);
+font-weight: 650;
+transition-property: font-size;
+ transition-duration: 0.5s;
+    
+}
+
+.form-group-cuenta a:hover{
+    font-size: 1.2rem ;
+}
+
+
+
+.form-group-cuenta span{
+    font-weight: 600;
+}
+.divLogin{
+    padding-top: 5px;
+    background-color: #510a327a;
+    border-radius: 30px;
+}
+.divCuenta{
+    padding-top: 5px;
+    background-color: #510a32ad;
+    border-radius: 30px;
+}
+/* Estilo header */
+#gaHeader{
+    font-family: 'Roboto Mono', monospace;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: #2d142c9c;
+    transition: background-color 500ms, color 500ms;
+    
+}
+#gaColBtn{
+    color: white;
+}
+.collapse .show #gaLista {
+    background-color: #510a328e;
+    text-align: center;
+    padding-right: 15px;
+    padding-bottom: 15px;
+  }
+
+
+#gaHeader.colorear{
+background-color: var(--color4);
+
+}
+#gaLista{
+    margin-left: 3vw;
+    margin-top: 3vh;
+}
+#susBtn{
+    margin-top: 3vh;
+    margin-left: 1vw;
+    background-color: var(--color2);
+    border: 1px solid var(--color5);
+    transition-property: transform;
+    transition-duration: 0.5s;
+    
+}
+#susBtn:hover{
+    transform: scale(1.1);
+}
+
+#gacontenedor{
+    margin: 0;
+    padding: 0;
+}
+
+
+#navbarNav{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 0;
+    height: 10vh;
+    background-color: transparent;
+    
+}
+
+.gaItem {
+    margin-top: 2vh;
+    margin-bottom: 0;
+    padding: 0;
+    height: fit-content;
+    transition-property: transform;
+    transition-duration: 0.5s;
+    
+}
+.gaItem:hover{
+    transform: scale(1.15);
+}
+#gaLista .gaItem a{
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    
+}
+.activado{
+    border-bottom: 2px solid var(--color2);
+
+    font-weight: bold;
+}
+#logoNav{
+   position: fixed;
+   top: 2vh;
+   right: 5vw;
+
+    height: 8vh;
+}
+
+/* Estilo Carousel sección Mi cuenta */
+
+/* .carousel-libros-micuenta {
+    position:relative;
+    width: 250px;
+    margin: 100px auto 0 auto;
+    perspective: 1000px;
+  }
+  
+  .carousel-micuenta {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; 
+    animation: rotate360 60s infinite forwards linear;
+  }
+  .carousel__face { 
+    position: absolute;
+    width: 300px;
+    height: 187px;
+    top: 20px;
+    left: 10px;
+    right: 10px;
+    background-size: cover;
+    box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
+    display: flex;
+  }
+  
+  span .mi-cuenta {
+    margin: auto;
+    font-size: 2rem;
+  }
+  
+  
+  .carousel__face:nth-child(1) {
+    background-image: url("https://images.pexels.com/photos/1141853/pexels-photo-1141853.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY(  0deg) translateZ(430px); }
+  .carousel__face:nth-child(2) { 
+    background-image: url("https://images.pexels.com/photos/1258865/pexels-photo-1258865.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      transform: rotateY( 40deg) translateZ(430px); }
+  .carousel__face:nth-child(3) {
+    background-image: url("https://images.pexels.com/photos/808466/pexels-photo-808466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY( 80deg) translateZ(430px); }
+  .carousel__face:nth-child(4) {
+    background-image: url("https://images.pexels.com/photos/1394841/pexels-photo-1394841.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY(120deg) translateZ(430px); }
+  .carousel__face:nth-child(5) { 
+    background-image: url("https://images.pexels.com/photos/969679/pexels-photo-969679.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+   transform: rotateY(160deg) translateZ(430px); }
+  .carousel__face:nth-child(6) { 
+    background-image: url("https://images.pexels.com/photos/1834400/pexels-photo-1834400.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+   transform: rotateY(200deg) translateZ(430px); }
+  .carousel__face:nth-child(7) { 
+    background-image: url("https://images.pexels.com/photos/1415268/pexels-photo-1415268.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+   transform: rotateY(240deg) translateZ(430px); }
+  .carousel__face:nth-child(8) {
+    background-image: url("https://images.pexels.com/photos/135018/pexels-photo-135018.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY(280deg) translateZ(430px); }
+  .carousel__face:nth-child(9) {
+    background-image: url("https://images.pexels.com/photos/1175135/pexels-photo-1175135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY(320deg) translateZ(430px); }
+
+    @keyframes rotate360 {
+        from {
+          transform: rotateY(0deg);
+        }
+        to {
+          transform: rotateY(-360deg);
+        }
+      } */
+
+/* Estilo footer  */
+
+.footer-wrap {
+    width: 100%;
+    padding-top: 80px;  
+    padding-bottom: 20px;
+    background-color: var(--color5);
+    color: white;
+  }
+  .footer-img{
+    width: 13vw;
+  }
+  .column2 img {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+  }
+  .column2 .row {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+  }
+  .column2{
+    padding-right:30px;
+    padding-left: 60px;
+  }
+  .bi-facebook::before{
+  margin-right: 10px;
+  }
+  .bi-twitter::before{
+    margin-right: 10px;
+  }
+  .bi-instagram::before{
+    margin-right: 10px;
+  }
+  .bi-youtube::before{
+  margin-right: 10px;
+  }
+  .legales{
+    color: rgb(12, 108, 140);
+  }
+  .column3{
+   color:white;
+   padding: 0;
+  }
+  .bi-telephone-inbound::before{
+   margin-right: 17px;
+  }
+  .bi-geo-alt::before{
+   margin-right: 17px;
+  }
+  .bi-envelope::before {
+    margin-right: 17px;
+  }

@@ -52,12 +52,12 @@ const cambiarClave= function(e){
       })
     
     if (clave1 === clave2){
-        conectado = perfil
+        perfil.contrasenia = clave1
         usuarios.splice(index, 1, perfil)
         alert ('Las claves coinciden')
         alert ('Se actualizaron sus datos')
         localStorage.setItem('usuarios', JSON.stringify(usuarios))
-        localStorage.setItem('conectado', JSON.stringify(conectado))
+        localStorage.setItem('conectado', JSON.stringify(perfil))
         formularioPass.reset();
     } else {
         alert ('Las claves no coinciden, por favor reingresar clave.')
