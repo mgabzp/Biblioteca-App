@@ -112,6 +112,9 @@ transition-property: background-color;
   font-family: 'Montserrat', sans-serif;
 }
 
+#nosotrosMain{
+  margin-top: 15vh !important;
+}
 #about-body span{
   font-weight: bold;
 }
@@ -540,4 +543,5 @@ margin-right: 10px;
 .bi-envelope::before {
   margin-right: 17px;
 }
+
 

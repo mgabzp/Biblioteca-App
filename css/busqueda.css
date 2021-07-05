@@ -161,14 +161,18 @@ root{
 #susImg{
     width: 100%;
     height: 100%;
+    object-fit: contain;
 }
-.modalInfo, #modalInfo, .modalModifi{
+.modalInfo, #modalInfo, .modalModifi,#susBtnMod{
     background-color: rgba(56, 4, 45, 0.986) !important;
     color: whitesmoke;
 }
 #modalModif{
     overflow: scroll;
 }
+
+
+
 #modifBtn, #alquilarLib{
     
     font-weight: 600;
