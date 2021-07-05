@@ -1,0 +1,21 @@
+:root{
+    --color1: #EE4540;
+    --color2: #C72C41;
+    --color3: #801336;
+    --color4: #510A32;
+    --color5: #2D142C;
+}
+#gaLista {
+
+    background-color: #ffffff00;
+
+}
+#gaNavbar{
+    height: 12vh !important;
+}
+.divRegis{
+    margin-top: 60px;
+    position: absolute;
+    top:15vh
+}
+

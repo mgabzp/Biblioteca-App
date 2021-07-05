@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+    rel="stylesheet"
+    href="/css/screen768.css"
+    media="screen and (min-width:768px)"
+  />
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>Biblioteca digital</title>
+  </head>
+  <body class="about-body">
+    <header id="gaHeader">
+      <nav class="navbar navbar-expand-md" id="gaNavbar">
+        <div class="container" id="gacontenedor">
+          <button
+            class="navbar-toggler justify-content-end"
+            id="gaColBtn"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+          <img id="logoNav" src="/img/biblioteca-01.png" alt="logo biblioteca"></button>
+          <div class="col-12">
+            <div
+              class="collapse navbar-collapse justify-content-start gaNavCol"
+              id="navbarNav"
+            >
+              <ul class="navbar-nav" id="gaLista">
+                <li class="nav-item gaItem">
+                  <a class="nav-link" id="sesBoton" href="/html/login.html"
+                    ><i class="fa fa-user fa-2x" aria-hidden="true"
+                      ></i
+                    ></a
+                  >
+                </li>
+                <li class="nav-item" >
+                  <div class="btn-group dropdown" id="btnSes">
+                    <button class="btn btn-md dropdown-toggle "  type="button" data-toggle="dropdown" aria-haspopup="true" id="perfilBtn" aria-expanded="false">
+                      </button>
+                    <div class="dropdown-menu dropdown-menu-sm-left"  id="perfilDd">
+                        <a class="dropdown-item " href="/html/micuenta.html">Mi cuenta</a>
+                        <div class="dropdown-divider perfilDd"></div>
+                        <a class="dropdown-item " id="cerrarLink" onclick="cerrarSesion()" href="#">Cerrar sesión</a>
+                      </div>
+                  </div>
+                             </li>
+                
+                <li class="nav-item  gaItem">
+                  <a class="nav-link" href="/html/home.html"
+                    >Inicio </a
+                  >
+                </li>
+                <li class="nav-item gaItem">
+                  <a class="nav-link" href="/html/busqueda.html">Búsqueda</a>
+                </li>
+                
+                <li class="nav-item activado gaItem">
+                  <a class="nav-link" href="#">Nosotros<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item gaItem">
+                  <a class="nav-link" href="/html/contacto.html">Contacto</a>
+                </li>
+                <li class="nav-item gaItem   soloAdmin">
+                  <a class="nav-link soloAdmin" href="/html/cargar.html"
+                    >Cargar</a
+                  >
+                </li>
+                <button
+                  type="button"
+                  class="btn btn-success btn-sm mb-5 soloUsuario"
+                  data-toggle="modal"
+                  data-target="#exampleModal"
+                  id="susBtn"
+                >
+                  Suscríbete
+                </button>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <a
+          class="navbar-brand font-weight-bold justify-content-end d-none d-md-block"
+          id="logonav"
+          href="#"
+          ><img id="logoNavG" src="/img/biblioteca-01.png" alt="logo biblioteca"></a
+        >
+      </nav>
+    </header>
+    <main>
+        <section class="mt-4 about-info">
+            <div class="container">
+              <div class="row mt-5">
+                  <div class="col-12 col-md-12 text-center">
+                    <h3>Que son Los Magios?</h3>
+                    <p class="mb-4">Official Name: Japan National Tourism Organization | Established: 1964
+                      <br>Purpose: Committed to the development of international tourism exchanges
+                      <br>Headquarters: 1-6-4, Yotsuya, Shinjuku-ku, Tokyo 160-0004.</p>
+                      <hr class="about-hr">
+                    <h3>Activities</h3>
+                    <p class="mb-4">Los Magios is involved in a broad range of activities both domestically and worldwide, to encourage international tourists from all over the world to visit Japan.</p>
+                    <hr class="about-hr">
+                    <h3>Activities by Overseas Offices</h3>
+                    <p class="mb-4">Los Magios maintains 22 offices in key cities around the world, through which a wide range of tourism-related promotions are carried out. Each overseas office is responsible for promoting travel and tourism to Japan; one of the most important functions is to help the travel industry encourage their clients to visit Japan.</p>
+                    <hr class="about-hr">
+                    <h3 class="mt-4">Nuestro equipo</h3>
+                  </div>                  
+              </div>
+            </div>
+          </section>
+          <!-- Alternativa 5 cards -->
+             <div class="container-fluid mt-4">
+                <div class="row">
+                  <div class="col d-flex justify-content-center">
+                     <div class="wrapper">
+                         <div class="card front-face">
+                            <img src="/img/photo5125508315307157858.jpg">
+                         </div>
+                         <div class="card back-face">
+                            <img src="/img/photo5125508315307157858.jpg">
+                            <div class="info">
+                               <div class="title">
+                                  Laura Bono
+                               </div>
+                               <p>User interface designer and <br>front-end developer</p>
+                            </div>
+                            <ul>
+                               <a href="#"><i class="fab fa-facebook-f"></i></a>
+                               <a href="#"><i class="fab fa-twitter"></i></a>
+                               <a href="#"><i class="fab fa-instagram"></i></a>
+                            </ul>
+                         </div>
+                      </div>
+                 </div>
+                 <div class="col d-flex justify-content-center">
+                     <div class="wrapper">
+                         <div class="card front-face">
+                             <img src="/img/avatar-gabin.jpg" alt="">
+                         </div>
+                         <div class="card back-face">
+                             <img src="/img/avatar-gabin.jpg" alt="">
+                            <div class="info">
+                               <div class="title">
+                                  Gabriela Navarro
+                               </div>
+                               <p>User interface designer and <br>front-end developer</p>
+                            </div>
+                            <ul>
+                               <a href="#"><i class="fab fa-facebook-f"></i></a>
+                               <a href="#"><i class="fab fa-twitter"></i></a>
+                               <a href="#"><i class="fab fa-instagram"></i></a>
+                            </ul>
+                         </div>
+                      </div>
+                 </div>
+                 <div class="col d-flex justify-content-center">
+                     <div class="wrapper">
+                         <div class="card front-face">
+                            <img src="/img/avatar-gabip.jpg" alt="">
+                         </div>
+                         <div class="card back-face">
+                             <img src="/img/avatar-gabip.jpg" alt="">
+                            <div class="info">
+                               <div class="title">
+                                  Gabriela Perez
+                               </div>
+                               <p>User interface designer and <br>front-end developer</p>
+                            </div>
+                            <ul>
+                               <a href="#"><i class="fab fa-facebook-f"></i></a>
+                               <a href="#"><i class="fab fa-twitter"></i></a>
+                               <a href="#"><i class="fab fa-instagram"></i></a>
+                            </ul>
+                         </div>
+                      </div>
+                 </div>
+                 <div class="col d-flex justify-content-center">
+                     <div class="wrapper">
+                         <div class="card front-face">
+                            <img src="/img/avatar-mau.jpg" alt="">
+                         </div>
+                         <div class="card back-face">
+                             <img src="/img/avatar-mau.jpg" alt="">
+                            <div class="info">
+                               <div class="title">
+                                  Mauricio Perez
+                               </div>
+                               <p>User interface designer and front-end developer</p>
+                            </div>
+                            <ul>
+                               <a href="#"><i class="fab fa-facebook-f"></i></a>
+                               <a href="#"><i class="fab fa-twitter"></i></a>
+                               <a href="#"><i class="fab fa-instagram"></i></a>
+                            </ul>
+                         </div>
+                      </div>
+                 </div>
+                 <div class="col d-flex justify-content-center">
+                     <div class="wrapper  justify-content-center">
+                         <div class="card front-face">
+                            <img src="/img/photo5125508315307157857.jpg" alt="">
+                         </div>
+                         <div class="card back-face">
+                             <img src="/img/photo5125508315307157857.jpg" alt="">
+                            <div class="info">
+                               <div class="title">
+                                  Roberto Villafañe
+                               </div>
+                               <p>User interface designer and <br>front-end developer</p>
+                            </div>
+                            <ul>
+                               <a href="#"><i class="fab fa-facebook-f"></i></a>
+                               <a href="#"><i class="fab fa-twitter"></i></a>
+                               <a href="#"><i class="fab fa-instagram"></i></a>
+                            </ul>
+                         </div>
+                      </div>
+                 </div>
+                </div>
+             </div>
+    </main>
+    <footer class="footer-wrap">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="column1 col-12 col-md-4 text-center">
+            <img
+              class="footer-img text-center"
+              src="/img/biblioteca-01.png"
+              alt="LOGO"
+            />
+          </div>
+          <div class="column2 col-12 col-md-4 text-center">
+            <div class="row">
+              <label
+                ><i class="bi bi-facebook">Encontranos en Facebook</i></label
+              >
+              <label><i class="bi bi-twitter">Encontranos en Twitter</i></label>
+              <label
+                ><i class="bi bi-instagram">Encontranos en Instagram</i></label
+              >
+              <label><i class="bi bi-youtube">Encontranos en Youtube</i></label>
+            </div>
+          </div>
+          <div class="column3 col-12 col-md-4 text-center">
+              <i class="bi bi-geo-alt">Rioja 31 - Tucuman - Argentina</i>
+    <br>
+              <i class="bi bi-telephone-inbound">0381-5000000 - 0381-4000000</i>
+    <br>
+              <i class="bi bi-envelope">libreriaVirtual@gmail.com.ar</i>
+              <p>________________________________________</p>
+              <strong>
+                <p class="copy">© Copyright 2021 - Derechos reservados </p>
+              </strong>
+              <p>________________________________________</p>
+              <a class="legales" href="#">Politica de privacidad | </a>
+              <a class="legales" href="#"> Legales | </a>
+              <a class="legales" href="#">Terminos y Condiciones</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="/js/nosotros.js"></script>
+   
+  </body>
+</html>
